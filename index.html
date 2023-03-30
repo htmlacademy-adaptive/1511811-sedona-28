@@ -11,21 +11,26 @@
   <!--Header-->
   <header class="page-header">
     <nav class="page-nav">
-      <a class="page-nav__link" href="index.html">Главная</a>
-      <a class="page-nav__link" href="catalog.html">Фото и видео</a>
-      <img class="page-header__logo" src="" alt="Logo City of Sedona">
-      <a class="page-nav__link" href="form.html">Форма отзыва</a>
-      <a class="page-nav__link" href="https://htmlacademy.ru/">HTML academy</a>
+      <button class="main-nav__toggle" type="button">
+        <span class="visually-hidden">Открыть меню</span>
+      </button>
+      <div class="main-nav__wrapper">
+        <a class="page-nav__link page-nav__link--current" href="index.html">Главная</a>
+        <a class="page-nav__link" href="catalog.html">Фото и видео</a>
+        <img class="page-header__logo" src="" alt="Logo City of Sedona">
+        <a class="page-nav__link" href="form.html">Форма отзыва</a>
+        <a class="page-nav__link" href="https://htmlacademy.ru/">HTML academy</a>
+      </div>
     </nav>
   </header>
 
   <!--Main-->
   <main class="main-container">
-    <section class="welcome">
+    <div class="welcome">
       <h1 class="visually-hidden">Добро пожаловать в Седону.</h1>
       <img class="welcome-hero" src="" alt="Welcome to the gorgeous Sedona because the grand canyon sucks!" width="460"
         height="350">
-    </section>
+    </div>
     <section class="main-intro">
       <h2 class="main-intro__header">Седона — небольшой городок в Аризоне,<br> заслуживающий большего!</h2>
       <p class="main-intro__subtitle">Рассмотрим 5 причин, по которым Седона круче, чем Гранд Каньон!</p>
@@ -33,6 +38,7 @@
 
     <!--Список преимуществ-->
     <section class="advantages">
+      <h2 class="visually-hidden">Список преимуществ.</h2>
       <ul class="advantages__list">
         <li class="advantages__item advantages__item--preview">
           <div class="advantages__wrapper">
@@ -102,7 +108,8 @@
     <!--Заинтересовались?-->
     <section class="search-hotels">
       <h2 class="question">Заинтересовались?</h2>
-      <p class="date-offer">Укажите предполагаемые даты поездки,<br>и мы покажем вам лучшие предложения гостиниц в Седоне</p>
+      <p class="date-offer">Укажите предполагаемые даты поездки,<br>и мы покажем вам лучшие предложения гостиниц в
+        Седоне</p>
       <a class="button button-brown button-search-hotel" href="#">Найти гостиницу</a>
     </section>
 
@@ -115,41 +122,29 @@
 
   <!--Footer-->
   <footer class="page-footer">
-    <div class="page-footer-containew">
-    <h2 class="page-footer__title">#visitsedona</h2>
-    <section class="footer-social">
+    <div class="page-footer-container">
       <h2 class="visually-hidden">Ссылки на социальные сети.</h2>
       <ul class="footer-social-list">
         <li class="footer-social-item vkontakte">
-          <a class="footer-social-link" href="https://vk.com/htmlacademy" aria-label="иконка на группу html academy в социальной сети vkontakte">
-            <svg class="social-item-svg" aria-hidden="true" focusable="false" xmlns="" width="24" height="14" fill="#FFFFFF">
-              <path d=""/>
-            </svg>
+          <a class="footer-social-link" href="https://vk.com/htmlacademy"
+            aria-label="иконка на группу html academy в социальной сети vkontakte">
           </a>
         </li>
         <li class="footer-social-item telegram">
-          <a class="footer-social-link" href="https://t.me/htmlacademy" aria-label="иконка на группу html academy в мессенджере telegram">
-            <svg class="social-item-svg" aria-hidden="true" focusable="false" xmlns="" width="21" height="18" fill="#FFFFFF" viewBox="0 0 18 16">
-              <path d=""/>
-            </svg>
+          <a class="footer-social-link" href="https://t.me/htmlacademy"
+            aria-label="иконка на группу html academy в мессенджере telegram">
           </a>
         </li>
         <li class="footer-social-item youtube">
-          <a class="footer-social-link" href="https://www.youtube.com/user/htmlacademyru" aria-label="иконка на канал html academy в видеохостинге youtube">
-            <svg class="social-item-svg" aria-hidden="true" focusable="false" xmlns="" width="23" height="18" fill="#FFFFFF">
-              <path d=""/>
-            </svg>
+          <a class="footer-social-link" href="https://www.youtube.com/user/htmlacademyru"
+            aria-label="иконка на канал html academy в видеохостинге youtube">
           </a>
         </li>
       </ul>
-    </section>
-    <p class="footer-madeby">
-      <a class="footer-madeby__htmlacademy-link" href="https://echo.htmlacademy.ru/">
-        <svg class="footer-madeby-svg" aria-hidden="true" focusable="false" xmlns="" width="27" height="34" fill="#000000" viewBox="" role="img" aria-label="логотип-ссылка ведущий на сайт html academy">
-          <path d="">
-        </svg>
-      </a>
-    </p>
+      <a class="page-footer__title" href="#">#visitsedona</a>
+      <p class="footer-madeby">
+        <a class="footer-madeby__htmlacademy-link" href="https://echo.htmlacademy.ru/"></a>
+      </p>
     </div>
   </footer>
 
