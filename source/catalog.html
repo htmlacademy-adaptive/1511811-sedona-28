@@ -10,16 +10,18 @@
 
   <!--Header-->
   <header class="page-header">
-    <nav class="page-nav">
+    <nav class="main-nav">
       <button class="main-nav__toggle" type="button">
         <span class="visually-hidden">Открыть меню.</span>
       </button>
       <div class="main-nav__wrapper">
-        <a class="page-nav__link" href="index.html">Главная</a>
-        <a class="page-nav__link" href="catalog.html">Фото и видео</a>
-        <img class="page-header__logo" src="#" alt="Logo City of Sedona">
-        <a class="page-nav__link page-nav__link--current" href="form.html">Форма отзыва</a>
-        <a class="page-nav__link" href="https://htmlacademy.ru/">HTML academy</a>
+        <a class="main-nav__link" href="index.html">Главная</a>
+        <a class="main-nav__link main-nav__link--current" href="catalog.html">Фото и видео</a>
+        <a class="main-nav__link" href="index.html">
+          <img class="main-nav-header__logo" src="#" alt="Логотип города Седона">
+        </a>
+        <a class="main-nav__link " href="form.html">Форма отзыва</a>
+        <a class="main-nav__link" href="https://htmlacademy.ru/">HTML academy</a>
       </div>
     </nav>
   </header>
@@ -35,75 +37,83 @@
       <p class="main-intro__subtitle-review">Не можете решиться на путешествие из-за курса?<br> Фотографии помогут вам забыть о политике и экономике</p>
 
       <!--Catalog-->
-      <div class="catalog">
+      <div class="product">
         <h2 class="visually-hidden">Фотографии Седоны.</h2>
         <ul class="product__list">
 
           <!--Неродные просторы-->
           <li class="product__item product__item--spaces">
-            <figure class="product__image">
-              <img src="#" alt="Неродные просторы">
-              <figcaption class="product__caption">
-                <p class="product__caption--title">Неродные просторы</p>
-                <p class="product__caption--subtitle">Автор фото: Борис</p>
-              </figcaption>
-            </figure>
-            <div class="product__caption--positive">
+            <a class="product__link" href="#">
+              <figure class="product__image">
+                <img src="#" alt="Неродные просторы">
+                <figcaption class="product__caption">
+                  <p class="product__caption-title">Неродные просторы</p>
+                  <p class="product__caption-subtitle">Автор фото: Борис</p>
+                </figcaption>
+              </figure>
+            </a>
+            <div class="product__caption-positive">
               <button class="button-positive">
-                <svg class="product__caption--positive-like" width="" height=""></svg>
+                <svg class="product__caption-positive-like" width="" height=""></svg>
               </button>
-              <span class="product__caption--positive-number">1350</span>
+              <span class="product__caption-positive-number product__caption-positive-number--add">1350</span>
             </div>
           </li>
 
           <!--Местная растительность-->
-          <li class="product__item product__item--vegetation">
-            <figure class="product__image">
-              <img src="#" alt="Местная растительность">
-              <figcaption class="product__caption">
-                <p class="product__caption--title">Местная растительность</p>
-                <p class="product__caption--subtitle">Автор фото: Сергей</p>
-              </figcaption>
-            </figure>
-            <div class="product__caption--positive">
+          <li class="product__item">
+            <a class="product__link" href="#">
+              <figure class="product__image">
+                <img src="#" alt="Местная растительность">
+                <figcaption class="product__caption">
+                  <p class="product__caption-title">Местная растительность</p>
+                  <p class="product__caption-subtitle">Автор фото: Сергей</p>
+                </figcaption>
+              </figure>
+            </a>
+            <div class="product__caption-positive">
               <button class="button-positive">
-                <svg class="product__caption--positive-like" width="" height=""></svg>
+                <svg class="product__caption-positive-like" width="" height=""></svg>
               </button>
-              <span class="product__caption--positive-number">143</span>
+              <span class="product__caption-positive-number product__caption-positive-number--add">143</span>
             </div>
           </li>
 
           <!--Дорога на север-->
-          <li class="product__item product__item--road">
-            <figure class="product__image">
-              <img src="#" alt="Дорога на север">
-              <figcaption class="product__caption">
-                <p class="product__caption--title">Дорога на север</p>
-                <p class="product__caption--subtitle">Автор фото: Петр</p>
-              </figcaption>
-            </figure>
-            <div class="product__caption--positive">
+          <li class="product__item">
+            <a class="product__link" href="#">
+              <figure class="product__image">
+                <img src="#" alt="Дорога на север">
+                <figcaption class="product__caption">
+                  <p class="product__caption-title">Дорога на север</p>
+                  <p class="product__caption-subtitle">Автор фото: Петр</p>
+                </figcaption>
+              </figure>
+            </a>
+            <div class="product__caption-positive">
               <button class="button-positive">
-                <svg class="product__caption--positive-like" width="" height=""></svg>
+                <svg class="product__caption-positive-like" width="" height=""></svg>
               </button>
-              <span class="product__caption--positive-number">96</span>
+              <span class="product__caption-positive-number product__caption-positive-number--add">96</span>
             </div>
           </li>
 
           <!--Мост дьявола-->
-          <li class="product__item product__item--bridge">
-            <figure class="product__image">
-              <img src="#" alt="Мост дьявола">
-              <figcaption class="product__caption">
-                <p class="product__caption--title">Мост дьявола</p>
-                <p class="product__caption--subtitle">Автор фото: Антон</p>
-              </figcaption>
-            </figure>
-            <div class="product__caption--positive">
+          <li class="product__item">
+            <a class="product__link" href="#">
+              <figure class="product__image">
+                <img src="#" alt="Мост дьявола">
+                <figcaption class="product__caption">
+                  <p class="product__caption-title">Мост дьявола</p>
+                  <p class="product__caption-subtitle">Автор фото: Антон</p>
+                </figcaption>
+              </figure>
+            </a>
+            <div class="product__caption-positive">
               <button class="button-positive">
-                <svg class="product__caption--positive-like" width="" height=""></svg>
+                <svg class="product__caption-positive-like" width="" height=""></svg>
               </button>
-              <span class="product__caption--positive-number">254</span>
+              <span class="product__caption-positive-number product__caption-positive-number--add">254</span>
             </div>
           </li>
         </ul>
@@ -115,7 +125,8 @@
         <p class="video__subtitle">Смотрите видеопрезентацию и скорее за билетами, пока они<br> не подорожали в очередной раз!</p>
         <div class="video__presentation">
           <h3 class="visually-hidden">Видеопрезентация Седоны.</h3>
-          <video class="video__presentation--clip" width="800" height="500" controls="controls" poster="#"></video>
+          <img class="video__clip" src="#" alt="Видеопрезентация Седоны">
+          <button class="video__button"></button>
         </div>
       </div>
     </section>
@@ -123,28 +134,31 @@
 
   <!--Footer-->
   <footer class="page-footer">
-    <div class="page-footer-container">
+    <div class="page-footer__container">
       <h2 class="visually-hidden">Ссылки на социальные сети.</h2>
-      <ul class="footer-social-list">
-        <li class="footer-social-item vkontakte">
-          <a class="footer-social-link" href="https://vk.com/htmlacademy"
+      <ul class="page-footer__social-list">
+        <li class="page-footer__social-item page-footer__social-item-vkontakte">
+          <a class="page-footer__social-link" href="https://vk.com/htmlacademy"
             aria-label="иконка на группу html academy в социальной сети vkontakte">
           </a>
         </li>
-        <li class="footer-social-item telegram">
-          <a class="footer-social-link" href="https://t.me/htmlacademy"
+        <li class="page-footer__social-item page-footer__social-item-telegram">
+          <a class="page-footer__social-link" href="https://t.me/htmlacademy"
             aria-label="иконка на группу html academy в мессенджере telegram">
           </a>
         </li>
-        <li class="footer-social-item youtube">
-          <a class="footer-social-link" href="https://www.youtube.com/user/htmlacademyru"
+        <li class="page-footer__social-item page-footer__social-item-youtube">
+          <a class="page-footer__social-link" href="https://www.youtube.com/user/htmlacademyru"
             aria-label="иконка на канал html academy в видеохостинге youtube">
           </a>
         </li>
       </ul>
       <a class="page-footer__title" href="#">#visitsedona</a>
-      <p class="footer-madeby">
-        <a class="footer-madeby__htmlacademy-link" href="https://echo.htmlacademy.ru/"></a>
+      <p class="page-footer__madeby">
+        <a class="page-footer__madeby-link" href="https://echo.htmlacademy.ru/">Разработано</a>
       </p>
     </div>
   </footer>
+</body>
+
+</html>
