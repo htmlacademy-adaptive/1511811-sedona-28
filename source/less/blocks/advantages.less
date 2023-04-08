@@ -1,0 +1,29 @@
+.advantages__title {
+  .title;
+  text-transform: uppercase;
+}
+
+.advantages__subtitle {
+  &--item {
+    color: #000000;
+  }
+
+  text-transform: uppercase;
+}
+
+.advantages__item {
+  &--preview {
+    background: @background-preview;
+    color: @subtitle-color;
+  }
+
+  &--no-preview {
+    color: #000000;
+    background: #eeeeee;
+  }
+  text-align: center;
+}
+
+.advantages__list {
+  .list-reset();
+}
