@@ -19,19 +19,20 @@
   border: none;
   padding-top: 16px;
   padding-bottom: 16px;
+  text-transform: uppercase;
 }
 @font-face {
   font-family: "PT Sans";
   font-style: normal;
   font-weight: 400;
-  src: url("../fonts/ptsans.woff") format("woff"), url("../fonts/ptsans.woff2") format("woff2");
+  src: url("../fonts/ptsans.woff2") format("woff2"), url("../fonts/ptsans.woff") format("woff");
   font-display: swap;
 }
 @font-face {
   font-family: "PT Sans";
   font-style: normal;
   font-weight: 700;
-  src: url("../fonts/ptsansbold.woff") format("woff"), url("../fonts/ptsansbold.woff2") format("woff2");
+  src: url("../fonts/ptsansbold.woff2") format("woff2"), url("../fonts/ptsansbold.woff") format("woff");
   font-display: swap;
 }
 html {
@@ -67,16 +68,17 @@ img {
   height: auto;
 }
 .main-nav {
-  font-weight: 700;
   font-size: 18px;
   line-height: 26px;
   text-align: center;
   text-transform: uppercase;
+  color: #ffffff;
   background: #81b3d2;
   align-items: center;
 }
 .main-nav__link {
   text-decoration: none;
+  font-weight: 700;
   color: #ffffff;
 }
 .page-wrapper {
@@ -108,12 +110,6 @@ img {
   line-height: 26px;
   text-transform: uppercase;
 }
-.advantages__subtitle {
-  text-transform: uppercase;
-}
-.advantages__subtitle--item {
-  color: #000000;
-}
 .advantages__item {
   text-align: center;
 }
@@ -124,6 +120,16 @@ img {
 .advantages__item--no-preview {
   color: #000000;
   background: #eeeeee;
+}
+.advantages__subtitle {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 21px;
+  color: #333333;
+  text-transform: uppercase;
+}
+.advantages__subtitle--item {
+  color: #ffffff;
 }
 .advantages__list {
   margin: 0;
@@ -214,6 +220,7 @@ img {
   font-size: 14px;
   line-height: 21px;
   color: #333333;
+  text-transform: none;
   text-align: left;
 }
 .product__link {
@@ -273,6 +280,7 @@ img {
   font-weight: 700;
   font-size: 18px;
   line-height: 26px;
+  font-family: inherit;
   border: none;
   background: #f2f2f2;
   padding: 16px;
@@ -284,6 +292,7 @@ img {
   border: none;
   padding-top: 16px;
   padding-bottom: 16px;
+  text-transform: uppercase;
   background-color: #81b3d2;
   color: #ffffff;
   width: 280px;
@@ -310,13 +319,14 @@ img {
 }
 .modal {
   text-align: center;
+  text-transform: uppercase;
 }
 .modal--negative {
   padding: 45px 41px 35px;
 }
 .modal__title {
   font-weight: 700;
-  font-size: 18px;
+  font-size: 21px;
   line-height: 26px;
 }
 .modal__subtitle {
