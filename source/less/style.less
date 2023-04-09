@@ -1,44 +1,23 @@
-@import "./fonts.less";
-@import "./main-nav.less";
-@import "./page-wrapper.less";
-@import "./welcome.less";
-@import "./advantages.less";
-@import "./search-hotels.less";
-@import "./main-intro.less";
-@import "./page-footer.less";
+//Добавление миксинов
+@import "./base/mixins.less";
 
-html {
-  height: 100%;
-}
+//Добавление переменных
+@import "./base/variables.less";
 
-body {
-  margin: 0;
-  padding: 0;
-  background: #ffffff;
-  font-family: "PT Sans", "Arial", sans-serif;
-  font-style: normal;
-  font-weight: 400;
-  font-size: 14px;
-  line-height: 21px;
-  color: #000000;
-  background-color: #f2f2f2;
-}
+//Базовые свойства
+@import "./base/fonts.less";
+@import "./base/base.less";
 
-.visually-hidden {
-  position: absolute;
-  width: 1px;
-  height: 1px;
-  margin: -1px;
-  border: 0;
-  padding: 0;
-  white-space: nowrap;
-  clip-path: inset(100%);
-  clip: rect(0 0 0 0);
-  overflow: hidden;
-}
-
-
-
-
-
-
+//Блоки компонентов
+@import "./blocks/main-nav.less";
+@import "./blocks/page-wrapper.less";
+@import "./blocks/welcome.less";
+@import "./blocks/advantages.less";
+@import "./blocks/search-hotels";
+@import "./blocks/main-intro.less";
+@import "./blocks/page-footer.less";
+@import "./blocks/product.less";
+@import "./blocks/review-form.less";
+@import "./blocks/video.less";
+@import "./blocks/modal.less";
+@import "./blocks/container.less";
