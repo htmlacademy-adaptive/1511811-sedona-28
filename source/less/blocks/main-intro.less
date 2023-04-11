@@ -1,7 +1,15 @@
 .main-intro {
   text-align: center;
   text-transform: uppercase;
-  margin-top: 36px;
+  padding-top: 36px;
+
+  @media (min-width: @tablet-width) {
+    padding: 47px 124px 55px;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding: 59px 357px 44px;
+  }
 }
 
 .main-intro__header {

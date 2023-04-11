@@ -3,7 +3,7 @@
   background-size: cover;
   background-repeat: no-repeat;
   background-color: #5282ab;
-  min-height: 389px;
+  height: 389px;
 
 
   &--small {
@@ -12,5 +12,19 @@
     background-repeat: no-repeat;
     background-color: #5282ab;
     min-height: 158px;
+  }
+
+  @media (min-width: @tablet-width) {
+    height: 518px;
+    background-image: url("../../img/main-hero-back-desktop.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+
+  @media (min-width: @desktop-width) {
+    height: 518px;
+    background-image: url("../../img/main-hero-back-desktop.png");
+    background-size: cover;
+    background-repeat: no-repeat;
   }
 }
