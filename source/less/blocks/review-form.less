@@ -1,6 +1,63 @@
+.review-form {
+  display: flex;
+  flex-direction: column;
+
+  @media (min-width: @tablet-width) {
+    display: grid;
+    grid-template-columns: 295px 295px;
+    column-gap: 58px;
+  }
+
+  @media (min-width: @desktop-width) {
+    display: grid;
+    grid-template-columns: 430px 430px;
+    column-gap: 100px;
+  }
+}
+
 .review-form__field {
+  margin: 0;
   padding: 0;
   border: none;
+
+  //Ваше общее впечатление
+  &--effect {
+    @media (min-width: @tablet-width) {
+      grid-column: 1 / -1;
+      grid-row: 2 / 3;
+    }
+
+    @media (min-width: @desktop-width) {
+      grid-column: 1 / -1;
+      grid-row: 2 / 3;
+    }
+  }
+
+  //Посещенные достопримечательности
+  &--visited {
+    @media (min-width: @tablet-width) {
+      grid-column: 1 / -1;
+      grid-row: 3 / 4;
+    }
+
+    @media (min-width: @desktop-width) {
+      grid-column: 1 / -1;
+      grid-row: 3 / 4;
+    }
+  }
+}
+
+.review-form__effect-list,
+.review-form__infrastructure-list {
+  @media (min-width: @tablet-width) {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  @media (min-width: @desktop-width) {
+    display: flex;
+    justify-content: space-between;
+  }
 }
 
 .review-form__id-wrapper {
@@ -37,12 +94,37 @@
   border: none;
 }
 
+//textarea для описания восторгов
 .review-form__description {
   .title;
   font-family: inherit;
   border: none;
   background: #f2f2f2;
   padding: 16px;
+  width: 247px;
+  height: 118px;
+
+  @media (min-width: @tablet-width) {
+    width: 616px;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 736px;
+  }
+}
+
+.review-form__bottom-wrapper {
+  @media (min-width: @tablet-width) {
+    display: flex;
+    justify-content: space-between;
+    width: 648px;
+  }
+
+  @media (min-width: @desktop-width) {
+    display: flex;
+    justify-content: space-between;
+    width: 768px;
+  }
 }
 
 .review-form__button {

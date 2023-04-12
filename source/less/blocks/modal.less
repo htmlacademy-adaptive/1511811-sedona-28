@@ -23,8 +23,17 @@
   background-color: @button-blue;
 }
 
+//Ваш отзыв отправлен
 .modal__wrapper {
   padding: 39px 39px 20px;
+
+  @media (min-width: @tablet-width) {
+    padding: 53px 97px 30px;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding: 50px 46px;
+  }
 }
 
 .modal__button {
@@ -32,6 +41,7 @@
   background: #f2f2f2;
 }
 
+//Кнопка ок
 .modal__ok-button {
   .title;
   width: 180px;
@@ -40,15 +50,33 @@
   background-color: @button-blue;
 }
 
-/*Закрытие модальных окон*/
-/*
+//Mодальныe окна*/
+
 .modal-container {
+  // position: fixed;
+  // top: 0;
+  // left: 0;
+  margin: auto;
+
+  //Ваш отзыв отправлен
   &--close-positive {
-    display: none;
+    @media (min-width: @tablet-width) {
+      width: 640px;
+    }
   }
 
+  @media (min-width: @desktop-width) {
+    width: 640px;
+  }
+
+  //Что-то пошло не так
   &--close-negative {
-    display: none;
+    @media (min-width: @tablet-width) {
+      width: 400px;
+    }
+
+    @media (min-width: @desktop-width) {
+      width: 400px;
+    }
   }
 }
-*/
