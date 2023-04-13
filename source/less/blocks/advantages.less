@@ -7,13 +7,57 @@
   &--preview {
     background: @background-preview;
     color: @subtitle-color;
+
+    @media (min-width: @tablet-width) {
+      grid-column: 1 / -1;
+      display: grid;
+      grid-template-columns: 256px 512px;
+    }
+
+    @media (min-width: @desktop-width) {
+      grid-column: 1 / -1;
+      display: grid;
+      grid-template-columns: 400px 800px;
+    }
+  }
+
+  &--preview-bridge {
+    background: @background-preview;
+    color: @subtitle-color;
+
+    @media (min-width: @tablet-width) {
+      grid-column: 1 / -1;
+      display: grid;
+      grid-template-columns: 512px 256px;
+    }
+
+    @media (min-width: @desktop-width) {
+      grid-column: 1 / -1;
+      display: grid;
+      grid-template-columns: 800px 400px;
+    }
   }
 
   &--no-preview {
     color: #000000;
     background: #eeeeee;
   }
+
   text-align: center;
+}
+
+.advantages__wrapper {
+  &--city {
+    @media (min-width: @tablet-width) {
+      order: -1;
+    }
+  }
+
+  &--bridge {
+    @media (min-width: @tablet-width) {
+      order: 1;
+    }
+  }
 }
 
 .advantages__subtitle {
@@ -22,6 +66,7 @@
   &--item {
     color: #ffffff;
   }
+
   text-transform: uppercase;
 }
 
