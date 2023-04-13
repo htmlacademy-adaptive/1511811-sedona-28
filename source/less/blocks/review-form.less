@@ -1,64 +1,156 @@
-.review-form__field {
-  padding: 0;
-  border: none;
-}
-
-.review-form__id-wrapper {
+.review-form {
   display: flex;
   flex-direction: column;
+
+  @media (min-width: @tablet-width) {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 58px;
+  }
+
+  @media (min-width: @desktop-width) {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 100px;
+  }
 }
 
-.review-form__title {
-  .title;
-}
-
-.review-form__label {
-  .subtitle;
-  text-align: left;
-}
-
-.review-form__input {
-  .title;
-  font-family: inherit;
-  background: #f2f2f2;
+.review-form__field {
+  margin: 0;
+  padding: 0;
   border: none;
-}
 
-.review-form__effect-list {
-  .list-reset;
-}
+  //Ваше общее впечатление
+  &--effect {
+    @media (min-width: @tablet-width) {
+      grid-column: 1 / -1;
+      grid-row: 2 / 3;
+    }
 
-.review-form__control-label {
-  .title;
-  text-transform: none;
-}
+    @media (min-width: @desktop-width) {
+      grid-column: 1 / -1;
+      grid-row: 2 / 3;
+    }
+  }
 
-.review-form__marks-group {
-  border: none;
-}
+  //Посещенные достопримечательности
+  &--visited {
+    @media (min-width: @tablet-width) {
+      grid-column: 1 / -1;
+      grid-row: 3 / 4;
+    }
 
-.review-form__description {
-  .title;
-  font-family: inherit;
-  border: none;
-  background: #f2f2f2;
-  padding: 16px;
-}
+    @media (min-width: @desktop-width) {
+      grid-column: 1 / -1;
+      grid-row: 3 / 4;
+    }
+  }
 
-.review-form__button {
-  .bold;
-  .button;
-  background-color: @background-preview;
-  color: @subtitle-color;
-  width: 280px;
-}
+  &--user-message {
+    @media (min-width: @tablet-width) {
+      grid-column: 1 / -1;
+    }
 
-.review-form__footnote {
-  display: flex;
-  justify-content: right;
-  font-style: normal;
-  font-weight: 400;
-  font-size: 12px;
-  line-height: 21px;
-  color: rgba(51, 51, 51, 0.6);
+    @media (min-width: @desktop-width) {
+      grid-column: 1 / -1;
+    }
+  }
+
+  .review-form__effect-list,
+  .review-form__infrastructure-list {
+    @media (min-width: @tablet-width) {
+      display: flex;
+      justify-content: space-between;
+    }
+
+    @media (min-width: @desktop-width) {
+      display: flex;
+      justify-content: space-between;
+    }
+  }
+
+  .review-form__id-wrapper {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .review-form__title {
+    .title;
+  }
+
+  .review-form__label {
+    .subtitle;
+    text-align: left;
+  }
+
+  .review-form__input {
+    .title;
+    font-family: inherit;
+    background: #f2f2f2;
+    border: none;
+  }
+
+  .review-form__effect-list {
+    .list-reset;
+  }
+
+  .review-form__control-label {
+    .title;
+    text-transform: none;
+  }
+
+  .review-form__marks-group {
+    border: none;
+  }
+
+  //textarea для описания восторгов
+  .review-form__description {
+    .title;
+    font-family: inherit;
+    border: none;
+    background: #f2f2f2;
+    padding: 16px;
+    width: 247px;
+    height: 118px;
+
+    @media (min-width: @tablet-width) {
+      width: 616px;
+    }
+
+    @media (min-width: @desktop-width) {
+      width: 736px;
+    }
+  }
+
+  .review-form__bottom-wrapper {
+    @media (min-width: @tablet-width) {
+      display: flex;
+      justify-content: space-between;
+      width: 648px;
+    }
+
+    @media (min-width: @desktop-width) {
+      display: flex;
+      justify-content: space-between;
+      width: 768px;
+    }
+  }
+
+  .review-form__button {
+    .bold;
+    .button;
+    background-color: @background-preview;
+    color: @subtitle-color;
+    width: 280px;
+  }
+
+  .review-form__footnote {
+    display: flex;
+    justify-content: right;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 21px;
+    color: rgba(51, 51, 51, 0.6);
+  }
 }
