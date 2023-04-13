@@ -219,9 +219,51 @@ img {
   background: #81b3d2;
   color: #ffffff;
 }
+@media (min-width: 768px) {
+  .advantages__item--preview {
+    grid-column: 1 / -1;
+    display: grid;
+    grid-template-columns: 256px 512px;
+  }
+}
+@media (min-width: 1280px) {
+  .advantages__item--preview {
+    grid-column: 1 / -1;
+    display: grid;
+    grid-template-columns: 400px 800px;
+  }
+}
+.advantages__item--preview-bridge {
+  background: #81b3d2;
+  color: #ffffff;
+}
+@media (min-width: 768px) {
+  .advantages__item--preview-bridge {
+    grid-column: 1 / -1;
+    display: grid;
+    grid-template-columns: 512px 256px;
+  }
+}
+@media (min-width: 1280px) {
+  .advantages__item--preview-bridge {
+    grid-column: 1 / -1;
+    display: grid;
+    grid-template-columns: 800px 400px;
+  }
+}
 .advantages__item--no-preview {
   color: #000000;
   background: #eeeeee;
+}
+@media (min-width: 768px) {
+  .advantages__wrapper--city {
+    order: -1;
+  }
+}
+@media (min-width: 768px) {
+  .advantages__wrapper--bridge {
+    order: 1;
+  }
 }
 .advantages__subtitle {
   font-weight: 400;
@@ -392,10 +434,10 @@ img {
     grid-template-columns: 1fr 1fr;
   }
 }
-@media (min-width: 768px) {
+@media (min-width: 1280px) {
   .product__list {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr;
   }
 }
 @media (min-width: 768px) {
@@ -420,26 +462,34 @@ img {
 }
 @media (min-width: 768px) {
   .product__image--spaces {
-    width: 648px;
-    grid-column: 1 / -1;
-    grid-row: 1 / 2;
+    min-width: 648px;
   }
 }
 @media (min-width: 1280px) {
   .product__image--spaces {
-    width: 1200px;
+    min-width: 1200px;
   }
 }
 @media (min-width: 768px) {
   .product__image--wrapper {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
+    min-width: 648px;
+  }
+}
+@media (min-width: 1280px) {
+  .product__image--wrapper {
+    min-width: 1200px;
   }
 }
 @media (min-width: 768px) {
   .product__caption {
     grid-column: 1 / 2;
     grid-row: 2 / 3;
+  }
+}
+@media (min-width: 768px) {
+  .product__caption--wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
   }
 }
 .product__caption-title {
