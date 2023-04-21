@@ -68,8 +68,6 @@
   }
 
   &--user-message {
-    // margin: 24px 0 22px 0;
-
     @media (min-width: @tablet-width) {
       grid-column: 1 / -1;
       margin: 42px 0 0 0;
@@ -119,6 +117,8 @@
   @media (min-width: @desktop-width) {
     display: flex;
     justify-content: space-between;
+    flex-direction: row;
+    padding: 27px 0;
   }
 }
 
@@ -160,11 +160,14 @@
     column-gap: 32px;
     row-gap: 36px;
   }
-}
 
-// .review-form__infrastructure-item {
-//   // margin: 0 0 36px 0;
-// }
+  @media (min-width: @desktop-width) {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    padding: 41px 0;
+  }
+}
 
 .review-form__id-wrapper {
   display: flex;
@@ -176,10 +179,11 @@
   margin: 0 0 20px;
   text-align: center;
   padding: 24px 0 0 0;
-  position: relative;
+  position: static;
 
   @media (min-width: @tablet-width) {
     margin: 0 0 28px;
+    position: relative;
 
     &--highlight {
       width: 402px;
@@ -199,8 +203,8 @@
   position: absolute;
   height: 1px;
   background-color: #e5e5e5;
-  width: 100vw;
-  left: -100px;
+  width: 320px;
+  left: -20px;
   top: 0;
 
   @media (min-width: @tablet-width) {
@@ -285,7 +289,7 @@
 }
 
 .review-form__checkbox-label::after {
-  content: url("../../img/tick.svg");
+  content: url("../img/tick.svg");
   position: absolute;
   top: 2px;
   left: -32px;
