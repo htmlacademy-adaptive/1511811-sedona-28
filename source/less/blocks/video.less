@@ -1,21 +1,35 @@
 .video {
-  padding: 17px 6px 0;
+  padding: 17px 0 0;
   text-align: center;
   text-transform: uppercase;
 
   @media (min-width: @tablet-width) {
-    padding: 58px 102px 40px;
+    padding: 58px 0 40px;
   }
 
   @media (min-width: @desktop-width) {
-    padding: 62px 377px 64px;
+    padding: 62px 200px 84px;
+  }
+}
+
+.video__wrapper {
+  padding: 0 6px 38px;
+
+  @media (min-width: @tablet-width) {
+    padding: 0 102px 66px;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding: 0 177px 44px;
   }
 }
 
 .video__title {
   .bold;
+  margin: 0 0 37px;
 }
 
 .video__subtitle {
   .subtitle;
+  margin-bottom: 0;
 }

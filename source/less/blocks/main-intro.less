@@ -2,20 +2,50 @@
   text-align: center;
   text-transform: uppercase;
   padding-top: 36px;
+  padding-bottom: 32px;
+  position: relative;
 
   @media (min-width: @tablet-width) {
     padding: 47px 124px 55px;
+
+    br {
+      display: none;
+    }
   }
 
   @media (min-width: @desktop-width) {
     padding: 59px 357px 44px;
+
+    br {
+      display: none;
+    }
+  }
+}
+
+.main-intro::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -25px;
+  width: 320px;
+  height: 37px;
+  background-image: url("../../img/intro-triangle-second.svg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  z-index: 2;
+
+  @media (min-width: @tablet-width) {
+    display: none;
   }
 }
 
 .main-intro__header {
   .title;
+  margin-top: 0;
+  margin-bottom: 35px;
 }
 
 .main-intro__subtitle {
   .subtitle;
+  margin-bottom: 0;
 }
