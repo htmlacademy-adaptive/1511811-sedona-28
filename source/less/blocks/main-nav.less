@@ -1,17 +1,25 @@
-
 .main-nav {
-  font-size: 18px;
-  line-height: 26px;
+  .title;
   text-align: center;
   text-transform: uppercase;
   color: #ffffff;
   background: #81b3d2;
   align-items: center;
+  min-height: 56px;
+  position: relative;
 
   @media (min-width: @tablet-width) {
     font-size: 14px;
-    line-height: 21px;
+    line-height: 1.5; //21px
     min-height: 56px;
+    background: #ffffff;
+  }
+
+  @media (min-width: @desktop-width) {
+    font-size: 14px;
+    line-height: 1.5; //21px
+    min-height: 56px;
+    background: #ffffff;
   }
 }
 
@@ -24,49 +32,260 @@
     background-color: #ffffff;
     display: grid;
     grid-template-columns: repeat(5, 1fr);
+    width: 100%;
   }
 
   @media (min-width: @desktop-width) {
     background-color: #ffffff;
     display: grid;
     grid-template-columns: repeat(5, 1fr);
+    width: 100%;
   }
 }
 
 .main-nav__toggle {
-  padding: 0;
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 2;
   border: none;
+  display: block;
+  width: 68px;
+  height: 56px;
+  cursor: pointer;
+  padding: 0;
+  background-color: #ffffff;
+
+  &--opened {
+    background-color: #81b3d2;
+  }
 
   @media (min-width: @tablet-width) {
     display: none;
   }
 }
 
+//Значок (Бургерное меню)
+.main-nav--closed .main-nav__toggle::before {
+  content: "";
+  position: absolute;
+  top: 17px;
+  right: 20px;
+  width: 23px;
+  height: 4px;
+  background-color: #81b3d2;
+  box-shadow: 0 5px 0 0 #81b3d2, 0 10px 0 0 #81b3d2;
+}
+
+//Состояние hover (Бургерное меню)
+.main-nav--closed .main-nav__toggle:hover::before {
+  background-color: fade(#81b3d2, 60%);
+  box-shadow:
+    0 5px 0 0 fade(#81b3d2, 60%),
+    0 10px 0 0 fade(#81b3d2, 60%);
+}
+
+//Состояние active (Бургерное меню)
+.main-nav--closed .main-nav__toggle:active::before {
+  background-color: fade(#81b3d2, 30%);
+  box-shadow:
+    0 5px 0 0 fade(#81b3d2, 30%),
+    0 10px 0 0 fade(#81b3d2, 30%);
+}
+
+//Ссылки
 .main-nav__link {
   text-decoration: none;
   font-weight: 700;
   color: #ffffff;
   position: relative;
+  padding-top: 17px;
+  padding-bottom: 12px;
+  background: #81b3d2;
+  mix-blend-mode: normal;
+  cursor: pointer;
+
+  &--active {
+    box-shadow: none;
+  }
+
+  //Состояния ссылок для mobile
+  @media (max-width: @mobile-width-only) {
+    box-shadow:
+      0 1px 0 rgba(1, 1, 1, 0.2),
+      inset 0 1px 0 rgba(255, 255, 255, 0.2);
+
+    &:hover {
+      color: #ffffff;
+      background: #669ec0;
+    }
+
+    &:active {
+      color: #ffffff;
+      opacity: 0.3;
+      background: #5496bd;
+    }
+  }
+
+  //Состояния ссылок для tablet
+  @media (min-width: @tablet-width) {
+    background-color: #ffffff;
+    color: #000000;
+
+    &:hover {
+      color: #81b3d2;
+    }
+
+    &:active {
+      color: #000000;
+      opacity: 0.3;
+    }
+
+    &--current {
+      color: #766357;
+
+      &:hover {
+        color: #766357;
+      }
+
+      &:active {
+        color: #766357;
+      }
+    }
+  }
+
+  //Состояния для ссылок desktop
+  @media (min-width: @desktop-width) {
+    background-color: #ffffff;
+    color: #000000;
+
+    &--current {
+      color: #766357;
+
+      &:hover {
+        color: #766357;
+      }
+
+      &:active {
+        color: #766357;
+      }
+    }
+
+    &:hover {
+      color: #81b3d2;
+    }
+
+    &:active {
+      color: #000000;
+      opacity: 0.3;
+    }
+  }
 
   @media (min-width: @tablet-width) {
-    min-width: 153px;
+    min-width: 20%;
     padding-top: 18px;
     padding-bottom: 14px;
-    color: #000000;
   }
 
   @media (min-width: @desktop-width) {
-    min-width: 240px;
+    min-width: 20%;
     padding-top: 18px;
     padding-bottom: 14px;
-    color: #000000;
   }
 }
 
+//Логотип
 .main-nav__header-logo {
+  margin-bottom: -40px;
+
+
   @media (min-width: @tablet-width) {
+    left: -10%;
     display: block;
     margin-top: -18px;
     margin-bottom: -40px;
+    max-width: 185px;
+    position: absolute;
+    z-index: 1;
+  }
+
+  @media (min-width: @desktop-width) {
+    left: 10%;
+    display: block;
+    margin-top: -18px;
+    margin-bottom: -40px;
+    max-width: 185px;
+    position: absolute;
+    z-index: 1;
+  }
+}
+
+//Раскрытие всего меню навигации для мобильных устройств
+@media (max-width: @mobile-width-only) {
+  .main-nav--opened .main-nav__link {
+    display: block;
+
+
+    &--active {
+      display: none;
+    }
+  }
+}
+
+//Скрытие всего меню навигации для мобильных устройств
+@media (max-width: @mobile-width-only) {
+  .main-nav--closed .main-nav__link {
+    display: none;
+    background-color: #ffffff;
+
+    &--active {
+      display: block;
+      padding: 0;
+      height: 56px;
+    }
+  }
+}
+
+//на мобилке выпадающее меню перекрывает welcome картинку
+.main-nav--opened .main-nav__wrapper {
+  position: absolute;
+  width: 100%;
+}
+
+//Крестик (Закрытие меню)
+.main-nav--opened .main-nav__toggle {
+  top: 0;
+  right: 0;
+  height: 55px;
+  background-color: transparent;
+
+  &::before,
+  &::after {
+    content: "";
+    position: absolute;
+    // top: 17px;
+    right: 20px;
+    width: 28px;
+    height: 4px;
+    background-color: #ffffff;
+  }
+
+  &::before {
+    transform: rotate(45deg);
+    box-shadow: none;
+  }
+
+  &::after {
+    transform: rotate(-45deg);
+  }
+
+  &:hover {
+    color: #ffffff;
+    opacity: 0.6;
+  }
+
+  &:active {
+    color: #ffffff;
+    opacity: 0.3;
   }
 }

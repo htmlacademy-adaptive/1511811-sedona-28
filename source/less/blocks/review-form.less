@@ -1,6 +1,7 @@
 .review-form {
   display: flex;
   flex-direction: column;
+  gap: 24px;
 
   @media (min-width: @tablet-width) {
     display: grid;
@@ -19,12 +20,29 @@
   margin: 0;
   padding: 0;
   border: none;
+  position: relative;
+
+  //Представьтесь
+  &--id {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  //Контактная информация
+  &--contacts {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
 
   //Ваше общее впечатление
+
   &--effect {
     @media (min-width: @tablet-width) {
       grid-column: 1 / -1;
       grid-row: 2 / 3;
+      margin: 63px 0 0 0;
     }
 
     @media (min-width: @desktop-width) {
@@ -35,9 +53,12 @@
 
   //Посещенные достопримечательности
   &--visited {
+    padding-bottom: 15px;
+
     @media (min-width: @tablet-width) {
       grid-column: 1 / -1;
       grid-row: 3 / 4;
+      // margin: 58px 0 0 0;
     }
 
     @media (min-width: @desktop-width) {
@@ -49,108 +70,308 @@
   &--user-message {
     @media (min-width: @tablet-width) {
       grid-column: 1 / -1;
+      margin: 42px 0 0 0;
     }
 
     @media (min-width: @desktop-width) {
       grid-column: 1 / -1;
+      margin: 56px 0 0 0;
+      padding: 0 96px;
     }
   }
+}
 
-  .review-form__effect-list,
-  .review-form__infrastructure-list {
-    @media (min-width: @tablet-width) {
-      display: flex;
-      justify-content: space-between;
-    }
-
-    @media (min-width: @desktop-width) {
-      display: flex;
-      justify-content: space-between;
-    }
+//Вертикальная декоративная полоска
+.review-form__field--id::before {
+  @media (min-width: @tablet-width) {
+    content: "";
+    position: absolute;
+    width: 1px;
+    background-color: #dbdbdb;
+    height: 338px;
+    left: 332px;
+    top: -50px;
   }
 
-  .review-form__id-wrapper {
+  @media (min-width: @desktop-width) {
+    left: 485px;
+  }
+}
+
+.review-form__user-message {
+  margin-bottom: 56px;
+}
+
+.review-form__effect-list {
+  .list-reset;
+  display: flex;
+  flex-direction: column;
+  gap: 36px;
+
+  @media (min-width: @tablet-width) {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+  }
+
+  @media (min-width: @desktop-width) {
     display: flex;
-    flex-direction: column;
+    justify-content: space-between;
+    flex-direction: row;
+    padding: 27px 0;
+  }
+}
+
+//Полоска между Ваши впечатления
+.review-form__effect-list::before,
+.review-form__user-message::before {
+  @media (min-width: @tablet-width) {
+    content: "";
+    position: absolute;
+    height: 1px;
+    background-color: #dbdbdb;
+    width: 100%;
+    top: -42px;
+    left: 0;
+  }
+}
+
+//Полоска между Посещенные достопримечательности
+.review-form__infrastructure-list::before {
+  @media (min-width: @tablet-width) {
+    content: "";
+    position: absolute;
+    height: 1px;
+    background-color: #dbdbdb;
+    width: 100%;
+    top: -55px;
+  }
+}
+
+.review-form__infrastructure-list {
+  .list-reset;
+  display: flex;
+  flex-direction: column;
+  gap: 36px;
+
+  @media (min-width: @tablet-width) {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 32px;
+    row-gap: 36px;
   }
 
-  .review-form__title {
-    .title;
+  @media (min-width: @desktop-width) {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    padding: 41px 0;
   }
+}
 
-  .review-form__label {
-    .subtitle;
-    text-align: left;
-  }
+.review-form__id-wrapper {
+  display: flex;
+  flex-direction: column;
+}
 
-  .review-form__input {
-    .title;
-    font-family: inherit;
-    background: #f2f2f2;
-    border: none;
-  }
+.review-form__title {
+  .title;
+  margin: 0 0 20px;
+  text-align: center;
+  padding: 24px 0 0 0;
+  position: static;
 
-  .review-form__effect-list {
-    .list-reset;
-  }
+  @media (min-width: @tablet-width) {
+    margin: 0 0 28px;
+    position: relative;
 
-  .review-form__control-label {
-    .title;
-    text-transform: none;
-  }
-
-  .review-form__marks-group {
-    border: none;
-  }
-
-  //textarea для описания восторгов
-  .review-form__description {
-    .title;
-    font-family: inherit;
-    border: none;
-    background: #f2f2f2;
-    padding: 16px;
-    width: 247px;
-    height: 118px;
-
-    @media (min-width: @tablet-width) {
-      width: 616px;
+    &--highlight {
+      width: 402px;
+      background-color: #ffffff;
+      z-index: 2;
     }
-
-    @media (min-width: @desktop-width) {
-      width: 736px;
-    }
   }
 
-  .review-form__bottom-wrapper {
-    @media (min-width: @tablet-width) {
-      display: flex;
-      justify-content: space-between;
-      width: 648px;
-    }
-
-    @media (min-width: @desktop-width) {
-      display: flex;
-      justify-content: space-between;
-      width: 768px;
-    }
+  @media (min-width: @desktop-width) {
+    margin: 0 0 28px;
   }
+}
 
-  .review-form__button {
-    .bold;
-    .button;
-    background-color: @background-preview;
-    color: @subtitle-color;
+//Горизонтальная полоска в mobile
+.review-form__title::before {
+  content: "";
+  position: absolute;
+  height: 1px;
+  background-color: #e5e5e5;
+  width: 320px;
+  left: -20px;
+  top: 0;
+
+  @media (min-width: @tablet-width) {
+    display: none;
+  }
+}
+
+.review-form__label {
+  .subtitle;
+  text-align: left;
+  padding-left: 16px;
+}
+
+.review-form__input {
+  .title;
+  font-family: inherit;
+  background: #f2f2f2;
+  border: none;
+  padding: 16px 0 16px 16px;
+  width: 100%;
+}
+
+.review-form__input-control {
+  margin: 0;
+}
+
+.review-form__effect-item {
+  @media (min-width: @tablet-width) {
+    text-align: center;
     width: 280px;
+    padding: 10px 0;
+  }
+}
+
+.review-form__control-label {
+  .title;
+  text-transform: none;
+  padding-left: 16px;
+  position: relative;
+  margin-left: 46px;
+}
+
+.review-form__control-label::before {
+  content: "";
+  position: absolute;
+  top: -10px;
+  left: -45px;
+  width: 46px;
+  height: 46px;
+  border-radius: 50%;
+  background-color: #f2f2f2;
+}
+
+.review-form__control-label::after {
+  content: "";
+  position: absolute;
+  top: 5px;
+  left: -30px;
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  background-color: #333333;
+}
+
+.review-form__checkbox-label {
+  .title;
+  text-transform: none;
+  padding-left: 16px;
+  position: relative;
+  margin-left: 46px;
+}
+
+.review-form__checkbox-label::before {
+  content: "";
+  position: absolute;
+  top: -10px;
+  left: -45px;
+  width: 46px;
+  height: 46px;
+  border-radius: 4px;
+  background-color: #f2f2f2;
+}
+
+.review-form__checkbox-label::after {
+  content: url("../img/tick.svg");
+  position: absolute;
+  top: 2px;
+  left: -32px;
+  width: 25px;
+  height: 19px;
+}
+
+.review-form__marks-group {
+  border: none;
+  margin: 0;
+  padding: 0;
+}
+
+//textarea для описания восторгов
+.review-form__description {
+  .title;
+  font-family: inherit;
+  border: none;
+  background: #f2f2f2;
+  padding: 16px;
+  width: 247px;
+  height: 118px;
+
+  @media (min-width: @tablet-width) {
+    width: 616px;
   }
 
-  .review-form__footnote {
+  @media (min-width: @desktop-width) {
+    width: 736px;
+  }
+}
+
+.review-form__bottom-wrapper {
+  @media (min-width: @tablet-width) {
     display: flex;
-    justify-content: right;
-    font-style: normal;
-    font-weight: 400;
-    font-size: 12px;
-    line-height: 21px;
-    color: rgba(51, 51, 51, 0.6);
+    justify-content: space-between;
+    width: 648px;
+  }
+
+  @media (min-width: @desktop-width) {
+    display: flex;
+    justify-content: space-between;
+    width: 768px;
+  }
+}
+
+.review-form__button {
+  .bold;
+  .button;
+  background-color: @background-preview;
+  color: @subtitle-color;
+  width: 280px;
+}
+
+.review-form__footnote {
+  display: flex;
+  justify-content: right;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 1.75; //21px
+  color: rgba(51, 51, 51, 0.6);
+
+  @media (min-width: @tablet-width) {
+    align-items: center;
+  }
+
+  @media (min-width: @desktop-width) {
+    align-items: center;
+  }
+}
+
+.review-form__wrapper {
+  display: flex;
+}
+
+.review-form__icon {
+  width: 58px;
+  height: 58px;
+  background-color: #e6e6e6;
+
+  &--svg {
+    padding: 20px;
   }
 }

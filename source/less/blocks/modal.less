@@ -1,6 +1,8 @@
 .modal {
   text-align: center;
   text-transform: uppercase;
+  margin: auto;
+  background: #ffffff;
 
   &--negative {
     padding: 45px 41px 35px;
@@ -53,30 +55,20 @@
 //Mодальныe окна*/
 
 .modal-container {
-  // position: fixed;
-  // top: 0;
-  // left: 0;
-  margin: auto;
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: flex;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.3);
+  z-index: 5;
 
-  //Ваш отзыв отправлен
   &--close-positive {
-    @media (min-width: @tablet-width) {
-      width: 640px;
-    }
+    display: none;
   }
 
-  @media (min-width: @desktop-width) {
-    width: 640px;
-  }
-
-  //Что-то пошло не так
   &--close-negative {
-    @media (min-width: @tablet-width) {
-      width: 400px;
-    }
-
-    @media (min-width: @desktop-width) {
-      width: 400px;
-    }
+    display: none;
   }
 }

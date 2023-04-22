@@ -1,30 +1,32 @@
 .welcome {
-  background-image: url("../img/main-hero-back-mobile.jpg");
-  background-size: cover;
+  background-image: url("../img/intro-triangle.svg.svg"), url("../img/main-hero-back-mobile.jpg");
+  background-size: contain, cover;
   background-repeat: no-repeat;
   background-color: #5282ab;
   height: 389px;
+  background-position: bottom;
 
 
   &--small {
-    background-image: url("../img/main-hero-back-mobile-small.jpg");
-    background-size: cover;
+    background-image: url("../img/intro-triangle.svg.svg"), url("../img/main-hero-back-mobile-small.jpg");
+    background-size: contain, cover;
     background-repeat: no-repeat;
     background-color: #5282ab;
     min-height: 158px;
+    background-position: bottom;
   }
 
   @media (min-width: @tablet-width) {
     height: 518px;
-    background-image: url("../../img/main-hero-back-desktop.png");
-    background-size: cover;
+    background-image: url("../img/triangle-tablet.svg"), url("../img/main-hero-back-desktop.png");
+    background-size: contain, cover;
     background-repeat: no-repeat;
   }
 
   @media (min-width: @desktop-width) {
     height: 518px;
-    background-image: url("../../img/main-hero-back-desktop.png");
-    background-size: cover;
+    background-image: url("../img/intro-triangle.desktop.svg"), url("../img/main-hero-back-desktop.png");
+    background-size: contain, cover;
     background-repeat: no-repeat;
   }
 }

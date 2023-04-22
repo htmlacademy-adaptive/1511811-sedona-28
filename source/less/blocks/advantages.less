@@ -1,52 +1,153 @@
 .advantages__title {
   .title;
   text-transform: uppercase;
+  margin-top: 0;
+  margin-bottom: 11px;
+  position: relative;
+
+  &--house {
+    margin-bottom: 16px;
+  }
+}
+
+.advantages__title--house::before {
+  content: "";
+  background-image: url("../img/house.svg");
+  background-repeat: no-repeat;
+  background-size: contain;
+  position: absolute;
+  width: 37px;
+  height: 39px;
+  left: -18%;
+  top: -30%;
+
+  @media (min-width: @tablet-width) {
+    width: 77px;
+    height: 72px;
+    left: 30%;
+    top: -100px;
+  }
+
+  @media (min-width: @desktop-width) {
+    left: 38%;
+  }
+}
+
+.advantages__title--food::before {
+  content: "";
+  background-image: url("../img/burger.svg");
+  background-repeat: no-repeat;
+  background-size: contain;
+  position: absolute;
+  width: 40px;
+  height: 35px;
+  left: -18%;
+  top: -30%;
+
+  @media (min-width: @tablet-width) {
+    width: 77px;
+    height: 72px;
+    left: 30%;
+    top: -100px;
+  }
+
+  @media (min-width: @desktop-width) {
+    left: 38%;
+  }
+}
+
+.advantages__title--souvenirs::before {
+  content: "";
+  background-image: url("../img/present.svg");
+  background-repeat: no-repeat;
+  background-size: contain;
+  position: absolute;
+  width: 32px;
+  height: 38px;
+  left: -18%;
+  top: -30%;
+
+  @media (min-width: @tablet-width) {
+    width: 77px;
+    height: 72px;
+    left: 30%;
+    top: -100px;
+  }
+
+  @media (min-width: @desktop-width) {
+    left: 38%;
+  }
 }
 
 .advantages__item {
   &--preview {
     background: @background-preview;
     color: @subtitle-color;
+    text-align: center;
 
     @media (min-width: @tablet-width) {
       grid-column: 1 / -1;
       display: grid;
-      grid-template-columns: 256px 512px;
+      grid-template-columns: 33% 67%; // 256px 512px;
     }
 
     @media (min-width: @desktop-width) {
       grid-column: 1 / -1;
       display: grid;
-      grid-template-columns: 400px 800px;
+      grid-template-columns: 33% 67%; // 400px 800px;
     }
   }
 
   &--preview-bridge {
     background: @background-preview;
     color: @subtitle-color;
+    text-align: center;
 
     @media (min-width: @tablet-width) {
       grid-column: 1 / -1;
       display: grid;
-      grid-template-columns: 512px 256px;
+      grid-template-columns: 67% 33%; //512px 256px;
     }
 
     @media (min-width: @desktop-width) {
       grid-column: 1 / -1;
       display: grid;
-      grid-template-columns: 800px 400px;
+      grid-template-columns: 67% 33%; // 800px 400px;
     }
   }
 
   &--no-preview {
     color: #000000;
     background: #eeeeee;
+    text-align: center;
+    position: relative;
   }
+}
 
-  text-align: center;
+.advantages__item--no-preview:not(:last-child)::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  border-top: 1px solid #d6d6d6;
+
+  @media (min-width: @tablet-width) {
+    display: none;
+  }
 }
 
 .advantages__wrapper {
+  padding: 54px 18px 40px;
+
+  @media (min-width: @tablet-width) {
+    padding: 52px 33px 31px;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding: 52px 50px 51px;
+  }
+
   &--city {
     @media (min-width: @tablet-width) {
       order: -1;
@@ -54,17 +155,47 @@
   }
 
   &--bridge {
+    @media (max-width: @mobile-width-only) {
+      padding: 37px 18px;
+    }
+
     @media (min-width: @tablet-width) {
       order: 1;
+    }
+  }
+
+  &--no-preview {
+    padding: 24px 26px;
+
+    @media (min-width: @tablet-width) {
+      padding: 41px 33px;
+    }
+
+    @media (min-width: @desktop-width) {
+      padding: 52px 50px;
     }
   }
 }
 
 .advantages__subtitle {
   .subtitle;
+  margin-top: 11px;
+  margin-bottom: 0;
+
+  @media (min-width: @tablet-width) {
+    br {
+      display: none;
+    }
+  }
 
   &--item {
     color: #ffffff;
+
+    @media (min-width: @tablet-width) {
+      br {
+        display: none;
+      }
+    }
   }
 
   text-transform: uppercase;
@@ -81,5 +212,23 @@
   @media (min-width: @desktop-width) {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+//Блок для окошек без картинок серые
+.advantages__wrapper-cards {
+  padding: 23px 18px 33px 65px;
+
+  @media (max-width: @mobile-width-only) {
+    text-align: left;
+  }
+
+  @media (min-width: @tablet-width) {
+    padding: 156px 44px 61px;
+    text-align: center;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding: 166px 50px 71px;
   }
 }
