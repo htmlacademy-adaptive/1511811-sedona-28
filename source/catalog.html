@@ -6,6 +6,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>«Седона. Фото и видео.»</title>
   <link rel="stylesheet" href="css/style.css">
+  <link rel="icon" href="favicon32.ico">
+  <link rel="icon" href="img/favicon32.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="img/favicon152.png">
 </head>
 
 <body class="page__body">
@@ -31,9 +34,9 @@
 
     <!--Main-->
     <main">
-      <div class="welcome welcome--small">
+      <div class="welcome welcome--second-back">
         <h1 class="visually-hidden">Седона.</h1>
-        <img class="welcome-hero" src="#" alt="Sedona" width="460" height="80">
+        <img class="welcome__second-hero" src="img/text-sedona.svg" alt="Sedona" width="460" height="80">
       </div>
       <section class="page-intro container">
         <div class="catalog-intro">
@@ -49,16 +52,22 @@
             <!--Неродные просторы-->
             <li class="product__item product__item--spaces">
               <a class="product__link" href="#">
-                <article class="product__image product__image--wrapper">
-                  <img class=product__image--spaces src="#" alt="Неродные просторы">
+                <article class="product__article product__article--wrapper">
+                  <picture>
+                    <source media="(min-width: 1200px)" srcset="img/photo-1-desktop@1x.jpg 1x, img/photo-1-desktop@2x.jpg 2x">
+                    <source media="(min-width: 768px)" srcset="img/photo-1-tablet@1x.jpg 1x, img/photo-1-tablet@2x.jpg 2x">
+                    <img class="product__image product__image--spaces" src="img/photo-1-mobile@1x.jpg" srcset="img/photo-1-mobile@2x.jpg 2x" alt="Неродные просторы" width="1200" height="400">
+                  </picture>
                   <div class="product__caption-wrapper">
                     <div class="product__caption">
                       <h3 class="product__caption-title">Неродные просторы</h3>
-                        <p class="product__caption-subtitle">Автор фото: Борис</p>
+                      <p class="product__caption-subtitle">Автор фото: Борис</p>
                     </div>
                     <div class="product__caption-positive">
                       <button class="button-positive">
-                        <svg class="product__caption-positive-like" xmlns="http://www.w3.org/2000/svg" width="22" height="20" fill="#000000" viewBox="0 0 22 20"><path d="m12.4 3.6-.6 2.9-.6 2.5h8.7v2.1L17 18H8V8l4.4-4.4ZM2 10v8-8ZM13.2 0 6.6 6.6c-.4.3-.6.8-.6 1.4v10c0 1.1.9 2 2 2h9c.8 0 1.5-.5 1.8-1.2l3-7.1c.1-.2.1-.5.1-.7V9h.1c0-1.1-.9-2-2-2h-6.3l1-4.6v-.3c0-.4-.2-.8-.4-1.1l-1.1-1ZM4 8H0v12h4V8Z"/></svg>
+                        <svg class="product__caption-positive-like" xmlns="http://www.w3.org/2000/svg" width="22" height="20" fill="#000000" viewBox="0 0 22 20">
+                          <path d="m12.4 3.6-.6 2.9-.6 2.5h8.7v2.1L17 18H8V8l4.4-4.4ZM2 10v8-8ZM13.2 0 6.6 6.6c-.4.3-.6.8-.6 1.4v10c0 1.1.9 2 2 2h9c.8 0 1.5-.5 1.8-1.2l3-7.1c.1-.2.1-.5.1-.7V9h.1c0-1.1-.9-2-2-2h-6.3l1-4.6v-.3c0-.4-.2-.8-.4-1.1l-1.1-1ZM4 8H0v12h4V8Z" />
+                        </svg>
                       </button>
                       <span class="product__caption-positive-number product__caption-positive-number--add">1350</span>
                     </div>
@@ -71,15 +80,21 @@
             <li class="product__item">
               <a class="product__link" href="#">
                 <article class="product__image">
-                  <img src="#" alt="Местная растительность">
+                  <picture>
+                    <source media="(min-width: 1200px)" srcset="img/photo-2-desktop@1x.jpg 1x, img/photo-2-desktop@2x.jpg 2x">
+                    <source media="(min-width: 768px)" srcset="img/photo-2-tablet@1x.jpg 1x, img/photo-2-tablet@2x.jpg 2x">
+                    <img src="img/photo-2-mobile@1x.jpg" srcset="img/photo-2-mobile@2x.jpg 2x" width="400" height="267" alt="Местная растительность">
+                  </picture>
                   <div class="product__caption-wrapper">
                     <div class="product__caption">
                       <h3 class="product__caption-title">Местная растительность</h3>
-                        <p class="product__caption-subtitle">Автор фото: Сергей</p>
+                      <p class="product__caption-subtitle">Автор фото: Сергей</p>
                     </div>
                     <div class="product__caption-positive">
                       <button class="button-positive">
-                        <svg class="product__caption-positive-like" xmlns="http://www.w3.org/2000/svg" width="22" height="20" fill="#000000" viewBox="0 0 22 20"><path d="m12.4 3.6-.6 2.9-.6 2.5h8.7v2.1L17 18H8V8l4.4-4.4ZM2 10v8-8ZM13.2 0 6.6 6.6c-.4.3-.6.8-.6 1.4v10c0 1.1.9 2 2 2h9c.8 0 1.5-.5 1.8-1.2l3-7.1c.1-.2.1-.5.1-.7V9h.1c0-1.1-.9-2-2-2h-6.3l1-4.6v-.3c0-.4-.2-.8-.4-1.1l-1.1-1ZM4 8H0v12h4V8Z"/></svg>
+                        <svg class="product__caption-positive-like" xmlns="http://www.w3.org/2000/svg" width="22" height="20" fill="#000000" viewBox="0 0 22 20">
+                          <path d="m12.4 3.6-.6 2.9-.6 2.5h8.7v2.1L17 18H8V8l4.4-4.4ZM2 10v8-8ZM13.2 0 6.6 6.6c-.4.3-.6.8-.6 1.4v10c0 1.1.9 2 2 2h9c.8 0 1.5-.5 1.8-1.2l3-7.1c.1-.2.1-.5.1-.7V9h.1c0-1.1-.9-2-2-2h-6.3l1-4.6v-.3c0-.4-.2-.8-.4-1.1l-1.1-1ZM4 8H0v12h4V8Z" />
+                        </svg>
                       </button>
                       <span class="product__caption-positive-number product__caption-positive-number--add">143</span>
                     </div>
@@ -92,15 +107,23 @@
             <li class="product__item">
               <a class="product__link" href="#">
                 <article class="product__image">
-                  <img src="#" alt="Дорога на север">
+                  <picture>
+                    <source media="(min-width: 1200px)" srcset="img/photo-3-desktop@1x.jpg 1x, img/photo-3-desktop@2x.jpg 2x">
+                    <source media="(min-width: 768px)" srcset="img/photo-3-tablet@1x.jpg 1x, img/photo-3-tablet@2x.jpg 2x">
+                    <img src="img/photo-3-mobile@1x.jpg" srcset="img/photo-3-mobile@2x.jpg 2x" width="400" height="267" alt="Дорога на север">
+                  </picture>
                   <div class="product__caption-wrapper product__caption-wrapper--item">
                     <div class="product__caption">
                       <h3 class="product__caption-title">Дорога на север</h3>
-                        <p class="product__caption-subtitle">Автор фото: Петр</p>
+                      <p class="product__caption-subtitle">Автор фото: Петр</p>
                     </div>
                     <div class="product__caption-positive">
                       <button class="button-positive">
-                        <svg class="product__caption-positive-like" xmlns="http://www.w3.org/2000/svg" width="22" height="20" fill="#000000" viewBox="0 0 22 20"><path d="m12.4 3.6-.6 2.9-.6 2.5h8.7v2.1L17 18H8V8l4.4-4.4ZM2 10v8-8ZM13.2 0 6.6 6.6c-.4.3-.6.8-.6 1.4v10c0 1.1.9 2 2 2h9c.8 0 1.5-.5 1.8-1.2l3-7.1c.1-.2.1-.5.1-.7V9h.1c0-1.1-.9-2-2-2h-6.3l1-4.6v-.3c0-.4-.2-.8-.4-1.1l-1.1-1ZM4 8H0v12h4V8Z"/></svg>
+                        <svg class="product__caption-positive-like" xmlns="http://www.w3.org/2000/svg" width="22"
+                          height="20" fill="#000000" viewBox="0 0 22 20">
+                          <path
+                            d="m12.4 3.6-.6 2.9-.6 2.5h8.7v2.1L17 18H8V8l4.4-4.4ZM2 10v8-8ZM13.2 0 6.6 6.6c-.4.3-.6.8-.6 1.4v10c0 1.1.9 2 2 2h9c.8 0 1.5-.5 1.8-1.2l3-7.1c.1-.2.1-.5.1-.7V9h.1c0-1.1-.9-2-2-2h-6.3l1-4.6v-.3c0-.4-.2-.8-.4-1.1l-1.1-1ZM4 8H0v12h4V8Z" />
+                        </svg>
                       </button>
                       <span class="product__caption-positive-number product__caption-positive-number--add">96</span>
                     </div>
@@ -113,15 +136,23 @@
             <li class="product__item">
               <a class="product__link" href="#">
                 <article class="product__image">
-                  <img src="#" alt="Мост дьявола">
+                  <picture>
+                    <source media="(min-width: 1200px)" srcset="img/photo-4-desktop@1x.jpg 1x, img/photo-4-desktop@2x.jpg 2x">
+                    <source media="(min-width: 768px)" srcset="img/photo-4-tablet@1x.jpg 1x, img/photo-4-tablet@2x.jpg 2x">
+                    <img src="img/photo-4-mobile@1x.jpg" srcset="img/photo-4-mobile@2x.jpg 2x" alt="Мост дьявола">
+                  </picture>
                   <div class="product__caption-wrapper">
                     <div class="product__caption">
                       <h3 class="product__caption-title">Мост дьявола</h3>
-                        <p class="product__caption-subtitle">Автор фото: Антон</p>
+                      <p class="product__caption-subtitle">Автор фото: Антон</p>
                     </div>
                     <div class="product__caption-positive">
                       <button class="button-positive">
-                        <svg class="product__caption-positive-like" xmlns="http://www.w3.org/2000/svg" width="22" height="20" fill="#000000" viewBox="0 0 22 20"><path d="m12.4 3.6-.6 2.9-.6 2.5h8.7v2.1L17 18H8V8l4.4-4.4ZM2 10v8-8ZM13.2 0 6.6 6.6c-.4.3-.6.8-.6 1.4v10c0 1.1.9 2 2 2h9c.8 0 1.5-.5 1.8-1.2l3-7.1c.1-.2.1-.5.1-.7V9h.1c0-1.1-.9-2-2-2h-6.3l1-4.6v-.3c0-.4-.2-.8-.4-1.1l-1.1-1ZM4 8H0v12h4V8Z"/></svg>
+                        <svg class="product__caption-positive-like" xmlns="http://www.w3.org/2000/svg" width="22"
+                          height="20" fill="#000000" viewBox="0 0 22 20">
+                          <path
+                            d="m12.4 3.6-.6 2.9-.6 2.5h8.7v2.1L17 18H8V8l4.4-4.4ZM2 10v8-8ZM13.2 0 6.6 6.6c-.4.3-.6.8-.6 1.4v10c0 1.1.9 2 2 2h9c.8 0 1.5-.5 1.8-1.2l3-7.1c.1-.2.1-.5.1-.7V9h.1c0-1.1-.9-2-2-2h-6.3l1-4.6v-.3c0-.4-.2-.8-.4-1.1l-1.1-1ZM4 8H0v12h4V8Z" />
+                        </svg>
                       </button>
                       <span class="product__caption-positive-number product__caption-positive-number--add">254</span>
                     </div>
@@ -141,8 +172,15 @@
           </div>
           <div class="video__presentation">
             <h3 class="visually-hidden">Видеопрезентация Седоны.</h3>
-            <img class="video__clip" src="#" alt="Видеопрезентация Седоны">
-            <button class="video__button"></button>
+            <picture>
+              <source media="(min-width: 1200px)" srcset="img/video-desktop@1x.jpg 1x, img/video-desktop@2x.jpg 2x">
+              <source media="(min-width: 768px)" srcset="img/video-tablet@1x.jpg 1x, img/video-tablet@2x.jpg 2x">
+              <img class="video__clip" src="img/video-mobile@1x.jpg" srcset="img/video-mobile@2x.jpg 2x" width="800" height="500" alt="Видеопрезентация Седоны">
+            </picture>
+              <button class="video__button">
+              <svg xmlns="http://www.w3.org/2000/svg" width="48" height="54" viewBox="0 0 48 54">
+                <path fill="#fff" fill-opacity=".7" d="M48 27 0 54V0l48 27Z" /></svg>
+            </button>
           </div>
         </div>
       </section>

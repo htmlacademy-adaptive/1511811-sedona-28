@@ -14,6 +14,7 @@
 
 .product__item {
   margin: 25px 0;
+  position: relative;
 
   @media (min-width: @tablet-width) {
     margin: 0;
@@ -23,11 +24,38 @@
     @media (min-width: @tablet-width) {
       grid-column: 1 / -1;
     }
+
+    @media (min-width: @desktop-width) {
+      margin-bottom: -6px;
+    }
+  }
+}
+
+.product__article {
+  width: 100%; //280px
+
+  @media (min-width: @tablet-width) {
+    margin: 0;
+    width: 324px; //40%
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 400px; //83%
+  }
+
+  &--wrapper {
+    @media (min-width: @tablet-width) {
+      min-width: 648px;
+    }
+
+    @media (min-width: @desktop-width) {
+      min-width: 1200px;
+    }
   }
 }
 
 .product__image {
-  width: 87%; //280px
+  width: 100%; //280px
 
   @media (min-width: @tablet-width) {
     margin: 0;
@@ -41,16 +69,6 @@
   &--spaces {
     @media (min-width: @tablet-width) {
       margin: 0;
-      min-width: 648px;
-    }
-
-    @media (min-width: @desktop-width) {
-      min-width: 1200px;
-    }
-  }
-
-  &--wrapper {
-    @media (min-width: @tablet-width) {
       min-width: 648px;
     }
 
@@ -79,6 +97,7 @@
     display: grid;
     grid-template-columns: 1fr 100px;
     background: #f2f2f2;
+    margin-top: -6px;
 
     &--item {
       background-color: #eaeaea;
@@ -86,13 +105,11 @@
   }
 
   @media (min-width: @desktop-width) {
-    background: #000000;
-    opacity: 0.3;
-
-    &--item {
-      background: #000000;
-      opacity: 0.3;
-    }
+    background-color: rgba(0, 0, 0, 0.3);
+    position: absolute;
+    bottom: 6px;
+    width: 100%;
+    color: #ffffff;
   }
 }
 
