@@ -35,8 +35,19 @@
   padding-top: 16px;
   padding-bottom: 16px;
   text-transform: uppercase;
+  cursor: pointer;
 
   &--blue {
     background-color: @button-blue;
+
+    &:hover {
+      color: #ffffff;
+      background: #669ec0;
+    }
+
+    &:active {
+      color: rgba(255, 255, 255, 0.3);
+      background: #5496bd;
+    }
   }
 }
