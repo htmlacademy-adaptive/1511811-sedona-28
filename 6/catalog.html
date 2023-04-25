@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html class="page" lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>«Седона. Фото и видео.»</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="icon" href="favicon32.ico">
+  <link rel="icon" href="img/favicon32.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="img/favicon152.png">
+  <base href="https://htmlacademy-adaptive.github.io/1511811-sedona-28/6/">
+</head>
+
+<body class="page__body">
+
+  <div class="page-wrapper">
+    <!--Header-->
+    <header class="page-header">
+      <nav class="main-nav main-nav--closed main-nav--nojs">
+        <button class="main-nav__toggle" type="button">
+          <span class="visually-hidden">Открыть меню.</span>
+        </button>
+        <div class="main-nav__wrapper">
+          <a class="main-nav__link" href="index.html">Главная</a>
+          <a class="main-nav__link main-nav__link--current" href="catalog.html">Фото и видео</a>
+          <a class="main-nav__link main-nav__link--active" href="#">
+            <img class="main-nav__header-logo" src="./img/logo.svg" width="185" height="96" alt="Логотип города Седона">
+          </a>
+          <a class="main-nav__link" href="form.html">Форма отзыва</a>
+          <a class="main-nav__link" href="https://htmlacademy.ru/">HTML academy</a>
+        </div>
+      </nav>
+    </header>
+
+    <!--Main-->
+    <main">
+      <div class="welcome welcome--second-back">
+        <h1 class="visually-hidden">Седона.</h1>
+        <img class="welcome__second-hero" src="img/text-sedona.svg" alt="Sedona" width="460" height="80">
+      </div>
+      <section class="page-intro container">
+        <div class="catalog-intro">
+          <h2 class="catalog-intro__header">Фото и видео</h2>
+          <p class="catalog-intro__subtitle">Не можете решиться на путешествие из-за курса? Фотографии помогут вам
+            забыть о политике и экономике</p>
+        </div>
+        <!--Catalog-->
+        <div class="product">
+          <h2 class="visually-hidden">Фотографии Седоны.</h2>
+          <ul class="product__list">
+
+            <!--Неродные просторы-->
+            <li class="product__item product__item--spaces">
+              <a class="product__link" href="#">
+                <article class="product__article product__article--wrapper">
+                  <picture>
+                    <source media="(min-width: 1200px)" srcset="img/photo-1-desktop@1x.jpg 1x, img/photo-1-desktop@2x.jpg 2x">
+                    <source media="(min-width: 768px)" srcset="img/photo-1-tablet@1x.jpg 1x, img/photo-1-tablet@2x.jpg 2x">
+                    <img class="product__image product__image--spaces" src="img/photo-1-mobile@1x.jpg" srcset="img/photo-1-mobile@2x.jpg 2x" alt="Неродные просторы" width="1200" height="400">
+                  </picture>
+                  <div class="product__caption-wrapper">
+                    <div class="product__caption">
+                      <h3 class="product__caption-title">Неродные просторы</h3>
+                      <p class="product__caption-subtitle">Автор фото: Борис</p>
+                    </div>
+                    <div class="product__caption-positive">
+                      <button class="button-positive">
+                        <svg class="product__caption-positive-like" xmlns="http://www.w3.org/2000/svg" width="22" height="20" fill="#000000" viewBox="0 0 22 20">
+                          <path d="m12.4 3.6-.6 2.9-.6 2.5h8.7v2.1L17 18H8V8l4.4-4.4ZM2 10v8-8ZM13.2 0 6.6 6.6c-.4.3-.6.8-.6 1.4v10c0 1.1.9 2 2 2h9c.8 0 1.5-.5 1.8-1.2l3-7.1c.1-.2.1-.5.1-.7V9h.1c0-1.1-.9-2-2-2h-6.3l1-4.6v-.3c0-.4-.2-.8-.4-1.1l-1.1-1ZM4 8H0v12h4V8Z" />
+                        </svg>
+                      </button>
+                      <span class="product__caption-positive-number product__caption-positive-number--add">1350</span>
+                    </div>
+                  </div>
+                </article>
+              </a>
+            </li>
+
+            <!--Местная растительность-->
+            <li class="product__item">
+              <a class="product__link" href="#">
+                <article class="product__image">
+                  <picture>
+                    <source media="(min-width: 1200px)" srcset="img/photo-2-desktop@1x.jpg 1x, img/photo-2-desktop@2x.jpg 2x">
+                    <source media="(min-width: 768px)" srcset="img/photo-2-tablet@1x.jpg 1x, img/photo-2-tablet@2x.jpg 2x">
+                    <img src="img/photo-2-mobile@1x.jpg" srcset="img/photo-2-mobile@2x.jpg 2x" width="400" height="267" alt="Местная растительность">
+                  </picture>
+                  <div class="product__caption-wrapper">
+                    <div class="product__caption">
+                      <h3 class="product__caption-title">Местная растительность</h3>
+                      <p class="product__caption-subtitle">Автор фото: Сергей</p>
+                    </div>
+                    <div class="product__caption-positive">
+                      <button class="button-positive">
+                        <svg class="product__caption-positive-like" xmlns="http://www.w3.org/2000/svg" width="22" height="20" fill="#000000" viewBox="0 0 22 20">
+                          <path d="m12.4 3.6-.6 2.9-.6 2.5h8.7v2.1L17 18H8V8l4.4-4.4ZM2 10v8-8ZM13.2 0 6.6 6.6c-.4.3-.6.8-.6 1.4v10c0 1.1.9 2 2 2h9c.8 0 1.5-.5 1.8-1.2l3-7.1c.1-.2.1-.5.1-.7V9h.1c0-1.1-.9-2-2-2h-6.3l1-4.6v-.3c0-.4-.2-.8-.4-1.1l-1.1-1ZM4 8H0v12h4V8Z" />
+                        </svg>
+                      </button>
+                      <span class="product__caption-positive-number product__caption-positive-number--add">143</span>
+                    </div>
+                  </div>
+                </article>
+              </a>
+            </li>
+
+            <!--Дорога на север-->
+            <li class="product__item">
+              <a class="product__link" href="#">
+                <article class="product__image">
+                  <picture>
+                    <source media="(min-width: 1200px)" srcset="img/photo-3-desktop@1x.jpg 1x, img/photo-3-desktop@2x.jpg 2x">
+                    <source media="(min-width: 768px)" srcset="img/photo-3-tablet@1x.jpg 1x, img/photo-3-tablet@2x.jpg 2x">
+                    <img src="img/photo-3-mobile@1x.jpg" srcset="img/photo-3-mobile@2x.jpg 2x" width="400" height="267" alt="Дорога на север">
+                  </picture>
+                  <div class="product__caption-wrapper product__caption-wrapper--item">
+                    <div class="product__caption">
+                      <h3 class="product__caption-title">Дорога на север</h3>
+                      <p class="product__caption-subtitle">Автор фото: Петр</p>
+                    </div>
+                    <div class="product__caption-positive">
+                      <button class="button-positive">
+                        <svg class="product__caption-positive-like" xmlns="http://www.w3.org/2000/svg" width="22"
+                          height="20" fill="#000000" viewBox="0 0 22 20">
+                          <path
+                            d="m12.4 3.6-.6 2.9-.6 2.5h8.7v2.1L17 18H8V8l4.4-4.4ZM2 10v8-8ZM13.2 0 6.6 6.6c-.4.3-.6.8-.6 1.4v10c0 1.1.9 2 2 2h9c.8 0 1.5-.5 1.8-1.2l3-7.1c.1-.2.1-.5.1-.7V9h.1c0-1.1-.9-2-2-2h-6.3l1-4.6v-.3c0-.4-.2-.8-.4-1.1l-1.1-1ZM4 8H0v12h4V8Z" />
+                        </svg>
+                      </button>
+                      <span class="product__caption-positive-number product__caption-positive-number--add">96</span>
+                    </div>
+                  </div>
+                </article>
+              </a>
+            </li>
+
+            <!--Мост дьявола-->
+            <li class="product__item">
+              <a class="product__link" href="#">
+                <article class="product__image">
+                  <picture>
+                    <source media="(min-width: 1200px)" srcset="img/photo-4-desktop@1x.jpg 1x, img/photo-4-desktop@2x.jpg 2x">
+                    <source media="(min-width: 768px)" srcset="img/photo-4-tablet@1x.jpg 1x, img/photo-4-tablet@2x.jpg 2x">
+                    <img src="img/photo-4-mobile@1x.jpg" srcset="img/photo-4-mobile@2x.jpg 2x" alt="Мост дьявола">
+                  </picture>
+                  <div class="product__caption-wrapper">
+                    <div class="product__caption">
+                      <h3 class="product__caption-title">Мост дьявола</h3>
+                      <p class="product__caption-subtitle">Автор фото: Антон</p>
+                    </div>
+                    <div class="product__caption-positive">
+                      <button class="button-positive">
+                        <svg class="product__caption-positive-like" xmlns="http://www.w3.org/2000/svg" width="22"
+                          height="20" fill="#000000" viewBox="0 0 22 20">
+                          <path
+                            d="m12.4 3.6-.6 2.9-.6 2.5h8.7v2.1L17 18H8V8l4.4-4.4ZM2 10v8-8ZM13.2 0 6.6 6.6c-.4.3-.6.8-.6 1.4v10c0 1.1.9 2 2 2h9c.8 0 1.5-.5 1.8-1.2l3-7.1c.1-.2.1-.5.1-.7V9h.1c0-1.1-.9-2-2-2h-6.3l1-4.6v-.3c0-.4-.2-.8-.4-1.1l-1.1-1ZM4 8H0v12h4V8Z" />
+                        </svg>
+                      </button>
+                      <span class="product__caption-positive-number product__caption-positive-number--add">254</span>
+                    </div>
+                  </div>
+                </article>
+              </a>
+            </li>
+          </ul>
+        </div>
+
+        <!--Видеопрезентация-->
+        <div class="video">
+          <div class="video__wrapper">
+            <h2 class="video__title">Все еще сомневаетесь?</h2>
+            <p class="video__subtitle">Смотрите видеопрезентацию и скорее за билетами, пока они<br> не подорожали в
+              очередной раз!</p>
+          </div>
+          <div class="video__presentation">
+            <h3 class="visually-hidden">Видеопрезентация Седоны.</h3>
+            <picture>
+              <source media="(min-width: 1200px)" srcset="img/video-desktop@1x.jpg 1x, img/video-desktop@2x.jpg 2x">
+              <source media="(min-width: 768px)" srcset="img/video-tablet@1x.jpg 1x, img/video-tablet@2x.jpg 2x">
+              <img class="video__clip" src="img/video-mobile@1x.jpg" srcset="img/video-mobile@2x.jpg 2x" width="800" height="500" alt="Видеопрезентация Седоны">
+            </picture>
+              <button class="video__button">
+              <svg xmlns="http://www.w3.org/2000/svg" width="48" height="54" viewBox="0 0 48 54">
+                <path fill="#fff" fill-opacity=".7" d="M48 27 0 54V0l48 27Z" /></svg>
+            </button>
+          </div>
+        </div>
+      </section>
+      </main>
+
+      <!--Footer-->
+      <footer class="page-footer">
+        <div class="page-footer__container">
+          <h2 class="visually-hidden">Ссылки на социальные сети.</h2>
+          <ul class="page-footer__social-list">
+            <li class="page-footer__social-item page-footer__social-item--vkontakte">
+              <a class="page-footer__social-link" href="https://vk.com/htmlacademy"
+                aria-label="иконка на группу html academy в социальной сети vkontakte">
+                <svg class="page-footer__social-item-svg" aria-hidden="true" focusable="false"
+                  xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="#ffffff" viewBox="0 0 24 24">
+                  <g clip-path="url(#a)">
+                    <path fill-rule="evenodd"
+                      d="M24.133 5.948c.166-.546 0-.948-.795-.948h-2.625c-.668 0-.976.347-1.143.73 0 0-1.335 3.196-3.226 5.272-.612.602-.89.793-1.224.793-.167 0-.418-.191-.418-.738V5.948c0-.656-.184-.948-.74-.948H9.834c-.417 0-.668.304-.668.593 0 .621.946.765 1.043 2.513v3.798c0 .833-.153.984-.487.984-.89 0-3.055-3.211-4.34-6.885C5.133 5.288 4.882 5 4.21 5H1.583c-.75 0-.9.347-.9.73 0 .682.89 4.07 4.145 8.551C6.998 17.341 10.053 19 12.836 19c1.67 0 1.875-.368 1.875-1.003v-2.313c0-.737.158-.884.687-.884.39 0 1.057.192 2.615 1.667C19.793 18.216 20.086 19 21.088 19h2.625c.75 0 1.126-.368.91-1.096-.238-.724-1.088-1.775-2.215-3.022-.612-.71-1.53-1.475-1.809-1.858-.389-.491-.278-.71 0-1.147 0 0 3.2-4.426 3.533-5.929h.001Z"
+                      clip-rule="evenodd" />
+                  </g>
+                  <defs>
+                    <clipPath id="a">
+                      <path fill="#fff" d="M.683 0h24v24h-24z" />
+                    </clipPath>
+                  </defs>
+                </svg>
+              </a>
+            </li>
+            <li class="page-footer__social-item page-footer__social-item--telegram">
+              <a class="page-footer__social-link" href="https://t.me/htmlacademy"
+                aria-label="иконка на группу html academy в мессенджере telegram">
+                <svg class="page-footer__social-item-svg" aria-hidden="true" focusable="false"
+                  xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="#ffffff" viewBox="0 0 24 24">
+                  <path
+                    d="m23.122 4.622-3.169 14.944c-.239 1.055-.862 1.317-1.748.82l-4.828-3.558-2.33 2.242c-.258.258-.473.473-.97.473l.347-4.917 8.948-8.086c.39-.346-.084-.54-.604-.192L7.705 13.314l-4.762-1.491c-1.036-.323-1.055-1.036.216-1.533l18.627-7.177c.863-.323 1.617.192 1.336 1.51Z" />
+                </svg>
+              </a>
+            </li>
+            <li class="page-footer__social-item page-footer__social-item--youtube">
+              <a class="page-footer__social-link" href="https://www.youtube.com/user/htmlacademyru"
+                aria-label="иконка на канал html academy в видеохостинге youtube">
+                <svg class="page-footer__social-item-svg" aria-hidden="true" focusable="false"
+                  xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="#ffffff" viewBox="0 0 24 24">
+                  <path
+                    d="M19.864 5H5.496C3.99 5 2.683 6.3 2.683 7.8v8.3c0 1.6 1.306 2.9 2.813 2.9h14.368c1.608 0 2.814-1.3 2.814-2.8V7.8c.1-1.5-1.206-2.8-2.814-2.8ZM9.716 15.4V8.6L16.55 12l-6.833 3.4Z" />
+                </svg>
+              </a>
+            </li>
+          </ul>
+          <a class="page-footer__title" href="#">#visitsedona</a>
+          <p class="page-footer__madeby">
+            <a class="page-footer__madeby-link" href="https://echo.htmlacademy.ru/">Разработано
+              <svg class="madeby-svg" xmlns="http://www.w3.org/2000/svg" width="28" height="35" fill="none"
+                viewBox="0 0 28 35">
+                <path fill="#000"
+                  d="M14.333.45h-.1l-13.5 1.4v24.7l13.5 8 13.4-8V1.85l-13.3-1.4Zm11.4 12.1-11.5-6.8v-.1h-.1l-.1-.1v.1l-11.4 6.9v-9l11.5-1.2 11.6 1.2v9Zm-11.6-5.3 11.5 6.7-4.5 2.6-7.1-4.2v1.4l5.9 3.5-.9.5-5-3v1.4l3.8 2.3-.8.5-3-1.8v1.4l1.9 1.1-1.8 1.1-11.4-6.7 11.4-6.8Zm-11.5 8.3 11.4 6.8v1l-7.9-4.7v1.4l8 4.8v1.1l-8-4.7v1.4l8 4.8 8.1-4.9v-5.2l3.4-2v10l-11.5 6.9-11.5-6.8v-9.9Z" />
+              </svg> </a>
+          </p>
+        </div>
+      </footer>
+  </div>
+</body>
+
+</html>
