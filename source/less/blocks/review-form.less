@@ -224,7 +224,10 @@
   background: #f2f2f2;
   border: none;
   padding: 16px 0 16px 16px;
-  width: 100%;
+
+  @media (min-width: @tablet-width) {
+    width: 100%;
+  }
 }
 
 .review-form__input-control {
