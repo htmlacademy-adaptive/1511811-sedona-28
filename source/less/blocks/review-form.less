@@ -169,6 +169,10 @@
   }
 }
 
+.review-form__infrastructure-item {
+  position: relative;
+}
+
 .review-form__id-wrapper {
   display: flex;
   flex-direction: column;
@@ -224,16 +228,16 @@
   background: #f2f2f2;
   border: none;
   padding: 16px 0 16px 16px;
+  outline: none;
 
   &:hover {
     background-color: #e5e5e5;
     color: #000000;
   }
 
-  &:active {
-    border: 4px solid #e5e5e5;
-    color: #000000;
+  &:focus-visible {
     background-color: #ffffff;
+    box-shadow: inset 0 0 0 4px #e5e5e5;
   }
 
   @media (min-width: @tablet-width) {
@@ -241,11 +245,17 @@
   }
 }
 
+.review-form__input::placeholder {
+  color: rgba(0, 0, 0, 0.3);
+}
+
 .review-form__input-control {
   margin: 0;
 }
 
 .review-form__effect-item {
+  position: relative;
+
   @media (min-width: @tablet-width) {
     text-align: center;
     width: 280px;
@@ -261,26 +271,68 @@
   margin-left: 46px;
 }
 
-.review-form__control-label::before {
+//делает круглый сервый фон в радиокнопках
+.review-form__control-mark {
   content: "";
   position: absolute;
   top: -10px;
-  left: -45px;
+  left: 0;
   width: 46px;
   height: 46px;
-  border-radius: 50%;
   background-color: #f2f2f2;
+
+  &:hover {
+    background-color: #e5e5e5;
+  }
+
+  &:active {
+    background-color: #e5e5e5;
+  }
+
+  @media (min-width: @tablet-width) {
+    top: 0;
+  }
 }
 
-.review-form__control-label::after {
+.review-form__input-control[type="radio"] + .review-form__control-mark {
+  border-radius: 50%;
+}
+
+//черная точка в радиокнопках
+.review-form__input-control[type="radio"]:checked + .review-form__control-mark::before {
   content: "";
   position: absolute;
-  top: 5px;
-  left: -30px;
+  top: 15px;
+  left: 16px;
   width: 15px;
   height: 15px;
   border-radius: 50%;
   background-color: #333333;
+}
+
+//серый квадратный фон в чекбоксах
+.review-form__input-control[type="checkbox"] + .review-form__control-mark {
+  content: "";
+  position: absolute;
+  top: -10px;
+  left: 0;
+  width: 46px;
+  height: 46px;
+  border-radius: 4px;
+  background-color: #f2f2f2;
+}
+
+//галочка в чекбоксах
+.review-form__input-control[type="checkbox"]:checked + .review-form__control-mark::before {
+  content: "";
+  position: absolute;
+  background-image: url("../img/tick.svg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  top: 15px;
+  left: 13px;
+  width: 22px;
+  height: 16px;
 }
 
 .review-form__checkbox-label {
@@ -291,25 +343,14 @@
   margin-left: 46px;
 }
 
-.review-form__checkbox-label::before {
-  content: "";
-  position: absolute;
-  top: -10px;
-  left: -45px;
-  width: 46px;
-  height: 46px;
-  border-radius: 4px;
-  background-color: #f2f2f2;
-}
-
-.review-form__checkbox-label::after {
-  content: url("../img/tick.svg");
-  position: absolute;
-  top: 2px;
-  left: -32px;
-  width: 25px;
-  height: 19px;
-}
+// .review-form__checkbox-label::after {
+//   content: url("../img/tick.svg");
+//   position: absolute;
+//   top: 2px;
+//   left: -32px;
+//   width: 25px;
+//   height: 19px;
+// }
 
 .review-form__marks-group {
   border: none;
