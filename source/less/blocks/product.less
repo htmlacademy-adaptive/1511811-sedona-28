@@ -1,9 +1,17 @@
 .product__list {
   .list-reset;
+  padding-top: 37px;
+
+  @media (max-width: @mobile-width-only) {
+    gap: 50px;
+    display: flex;
+    flex-direction: column;
+  }
 
   @media (min-width: @tablet-width) {
     display: grid;
     grid-template-columns: 1fr 1fr;
+    padding: 0;
   }
 
   @media (min-width: @desktop-width) {
@@ -13,7 +21,6 @@
 }
 
 .product__item {
-  margin: 25px 0;
   position: relative;
 
   @media (min-width: @tablet-width) {
@@ -28,6 +35,30 @@
     @media (min-width: @desktop-width) {
       margin-bottom: -6px;
     }
+  }
+}
+
+.product__item::before {
+  @media (max-width: @mobile-width-only) {
+    content: "";
+    position: absolute;
+    height: 1px;
+    background-color: #e5e5e5;
+    width: 320px;
+    left: -20px;
+    top: -25px;
+  }
+}
+
+.product__item:last-child::after {
+  @media (max-width: @mobile-width-only) {
+    content: "";
+    position: absolute;
+    height: 1px;
+    background-color: #e5e5e5;
+    width: 320px;
+    left: -20px;
+    top: 107%;
   }
 }
 
@@ -85,19 +116,19 @@
   }
 
   @media (min-width: @desktop-width) {
-    padding: 17px 0 17px 25px;
+    padding: 22px 0 15px 21px;
   }
 }
 
 .product__caption-wrapper {
-  margin-top: 15px;
+  margin-top: 8px;
 
   @media (min-width: @tablet-width) {
     margin: 0;
     display: grid;
     grid-template-columns: 1fr 100px;
     background: #f2f2f2;
-    margin-top: -6px;
+    margin-top: -8px;
 
     &--item {
       background-color: #eaeaea;
@@ -114,18 +145,15 @@
 }
 
 .product__caption-title {
-  .title;
+  .subtitle;
   text-align: left;
   color: #000000;
-  margin: 0 0 10px 0;
+  margin: 0 0 3px 0;
   text-transform: uppercase;
-
-  @media (min-width: @tablet-width) {
-    text-transform: none;
-  }
 
   @media (min-width: @desktop-width) {
     color: #ffffff;
+    text-transform: uppercase;
   }
 }
 
@@ -133,7 +161,7 @@
   .subtitle;
   text-transform: none;
   text-align: left;
-  margin: 10px 0 0 0;
+  margin: 3px 0 0 0;
 
   @media (min-width: @desktop-width) {
     color: #ffffff;
@@ -162,6 +190,11 @@
   font-size: 14px;
   line-height: 1.5; //21px
   color: #000000;
+  padding: 5px 0 0 7px;
+
+  @media (min-width: @tablet-width) {
+    padding-top: 6px;
+  }
 
   @media (min-width: @desktop-width) {
     color: #ffffff;
@@ -177,12 +210,16 @@
   }
 }
 
-.button-positive {
+.product-caption__button-positive {
   padding: 0;
   border: none;
   background: transparent;
   height: 21px;
   padding-right: 9px;
+
+  @media (min-width: @tablet-width) {
+    padding: 0;
+  }
 
   @media (min-width: @desktop-width) {
     background: transparent;
