@@ -24,9 +24,7 @@
           <a class="main-nav__link" href="index.html">Главная</a>
           <a class="main-nav__link main-nav__link--current" href="catalog.html">Фото и видео</a>
           <a class="main-nav__link main-nav__link--active" href="#">
-            <svg class="main-nav__header-logo" width="185" height="96">
-              <use href="img/sprite.svg#main-nav__header-logo"></use>
-            </svg>
+            <img class="main-nav__header-logo" src="img/logo.svg" width="185" height="96" alt="Logo of Sedona">
           </a>
           <a class="main-nav__link" href="form.html">Форма отзыва</a>
           <a class="main-nav__link" href="https://htmlacademy.ru/">HTML academy</a>
@@ -38,9 +36,11 @@
     <main>
       <div class="welcome welcome--second-back">
         <h1 class="visually-hidden">Седона.</h1>
-        <svg class="welcome__second-hero" width="460" height="80">
-          <use href="img/sprite.svg#text-sedona"></use>
-        </svg>
+        <picture>
+          <source media="(min-width: 1200px)" srcset="img/text-sedona-desktop.svg">
+          <source media="(min-width: 768px)" srcset="img/text-sedona-tablet.svg">
+          <img class="welcome__second-hero" src="img/text-sedona.svg" width="460" height="80" alt="Welcome to the gorgeous Sedona">
+        </picture>
       </div>
       <section class="page-intro container">
         <div class="catalog-intro">
@@ -90,7 +90,7 @@
                     <img src="img/photo-2-mobile@1x.jpg" srcset="img/photo-2-mobile@2x.jpg 2x" width="400" height="267" alt="Местная растительность">
                   </picture>
                   <div class="product__caption-wrapper">
-                    <div class="product__caption">
+                    <div class="product__caption product__caption--item">
                       <h3 class="product__caption-title">Местная растительность</h3>
                       <p class="product__caption-subtitle">Автор фото: Сергей</p>
                     </div>
@@ -117,7 +117,7 @@
                     <img src="img/photo-3-mobile@1x.jpg" srcset="img/photo-3-mobile@2x.jpg 2x" width="400" height="267" alt="Дорога на север">
                   </picture>
                   <div class="product__caption-wrapper product__caption-wrapper--item">
-                    <div class="product__caption">
+                    <div class="product__caption product__caption--item">
                       <h3 class="product__caption-title">Дорога на север</h3>
                       <p class="product__caption-subtitle">Автор фото: Петр</p>
                     </div>
@@ -144,7 +144,7 @@
                     <img src="img/photo-4-mobile@1x.jpg" srcset="img/photo-4-mobile@2x.jpg 2x" alt="Мост дьявола">
                   </picture>
                   <div class="product__caption-wrapper">
-                    <div class="product__caption">
+                    <div class="product__caption product__caption--item">
                       <h3 class="product__caption-title">Мост дьявола</h3>
                       <p class="product__caption-subtitle">Автор фото: Антон</p>
                     </div>
