@@ -1,20 +1,42 @@
-.modal {
-  text-align: center;
-  text-transform: uppercase;
-  margin: auto;
-  background: #ffffff;
+.modal__title {
+  .title;
+  margin-top: 0;
+  margin-bottom: 25px;
+
+  @media (min-width: @tablet-width) {
+    .big-title;
+    margin-bottom: 22px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-bottom: 25px;
+  }
 
   &--negative {
-    padding: 45px 41px 35px;
-  }
-}
+    br {
+      display: none;
+    }
 
-.modal__title {
-  .bold;
+    @media (min-width: @tablet-width) {
+      .big-title;
+      margin-bottom: 10px;
+
+      br {
+        display: block;
+      }
+    }
+  }
 }
 
 .modal__subtitle {
   .subtitle;
+
+  &--negative {
+    @media (min-width: @tablet-width) {
+      margin-top: 19px;
+      margin-bottom: 0;
+    }
+  }
 }
 
 .modal__close-button {
@@ -23,24 +45,51 @@
   padding-top: 18px;
   padding-bottom: 14px;
   background-color: @button-blue;
+
+  @media (min-width: @tablet-width) {
+    .bold;
+    width: 458px;
+  }
 }
 
 //Ваш отзыв отправлен
 .modal__wrapper {
   padding: 39px 39px 20px;
 
+  &--negative {
+    padding: 45px 42px 35px;
+  }
+
   @media (min-width: @tablet-width) {
-    padding: 53px 97px 30px;
+    padding: 43px 97px 30px;
+
+    &--negative {
+      padding: 45px 47px 49px;
+    }
   }
 
   @media (min-width: @desktop-width) {
-    padding: 50px 46px;
+    padding: 40px 46px 37px;
+
+    &--negative {
+      padding: 44px 46px 50px;
+    }
   }
 }
 
 .modal__button {
   padding: 20px;
   background: #f2f2f2;
+  margin-top: 17px;
+
+  @media (min-width: @tablet-width) {
+    padding: 44px 0;
+    margin-top: 5px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-top: 0;
+  }
 }
 
 //Кнопка ок
@@ -50,6 +99,12 @@
   padding-top: 18px;
   padding-bottom: 14px;
   background-color: @button-blue;
+  margin-top: 15px;
+
+  @media (min-width: @tablet-width) {
+    width: 272px;
+    margin-top: 48px;
+  }
 }
 
 //Mодальныe окна*/
@@ -68,7 +123,29 @@
     display: none;
   }
 
-  &--close-negative {
-    display: none;
+  // &--close-negative {
+  //   display: none;
+  // }
+}
+
+.modal {
+  text-align: center;
+  text-transform: uppercase;
+  margin: auto;
+  background: #ffffff;
+  width: 320px;
+
+  @media (min-width: @tablet-width) {
+    width: 640px;
+  }
+
+  &--negative {
+    @media (max-width: @mobile-width-only) {
+      width: 320px;
+    }
+
+    @media (min-width: @tablet-width) {
+      width: 400px;
+    }
   }
 }

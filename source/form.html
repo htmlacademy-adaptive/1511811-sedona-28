@@ -39,7 +39,8 @@
         <picture>
           <source media="(min-width: 1200px)" srcset="img/text-sedona-desktop.svg">
           <source media="(min-width: 768px)" srcset="img/text-sedona-tablet.svg">
-          <img class="welcome__second-hero" src="img/text-sedona.svg" width="460" height="80" alt="Welcome to the gorgeous Sedona">
+          <img class="welcome__second-hero" src="img/text-sedona.svg" width="460" height="80"
+            alt="Welcome to the gorgeous Sedona">
         </picture>
       </div>
       <section class="form-intro container">
@@ -57,18 +58,19 @@
             <legend class="review-form__title review-form__title--id">Представьтесь:</legend>
             <div class="review-form__id-wrapper">
               <label class="review-form__label" for="review-form__name">Имя<sup>*</sup>:</label>
-              <input class="review-form__input review-form__input--id" placeholder="Имя" type="text" name="review-form__name"
-                id="review-form__name" value="Пётр" required>
+              <input class="review-form__input review-form__input--id" placeholder="Имя" type="text"
+                name="review-form__name" id="review-form__name" value="Пётр" required>
             </div>
             <div class="review-form__id-wrapper">
               <label class="review-form__label" for="review-form__surname">Фамилия<sup>*</sup>:</label>
-              <input class="review-form__input review-form__input--id" placeholder="Фамилия" type="text" name="review-form__surname"
-                id="review-form__surname" value="Пустота" required>
+              <input class="review-form__input review-form__input--id" placeholder="Фамилия" type="text"
+                name="review-form__surname" id="review-form__surname" value="Пустота" required>
             </div>
             <div class="review-form__id-wrapper">
               <label class="review-form__label" for="review-form__middle-name">Отчество:</label>
-              <input class="review-form__input review-form__input--id review-form__input--surname" placeholder="Отчество" type="text" name="review-form__middle-name"
-                id="review-form__middle-name" value="Викторович">
+              <input class="review-form__input review-form__input--id review-form__input--surname"
+                placeholder="Отчество" type="text" name="review-form__middle-name" id="review-form__middle-name"
+                value="Викторович">
             </div>
           </fieldset>
 
@@ -78,8 +80,8 @@
             <div class="review-form__id-wrapper">
               <label class="review-form__label" for="review-form__telephone">Контактный телефон<sup>*</sup>:</label>
               <div class="review-form__wrapper">
-                <input class="review-form__input" placeholder="Введите телефон" type="tel" name="review-form__telephone"
-                  id="review-form__telephone" required>
+                <input class="review-form__input review-form__input--contacts" placeholder="Введите телефон" type="tel"
+                  name="review-form__telephone" id="review-form__telephone" required>
                 <div class="review-form__icon">
                   <svg class="review-form__icon--svg" width="18" height="18">
                     <use href="img/sprite.svg#icon-telephone"></use>
@@ -90,12 +92,12 @@
             <div class="review-form__id-wrapper">
               <label class="review-form__label subtitle" for="review-form__name">Электронная почта<sup>*</sup>:</label>
               <div class="review-form__wrapper">
-                <input class="review-form__input title" placeholder="Введите e-mail" type="email"
+                <input class="review-form__input review-form__input--contacts" placeholder="Введите e-mail" type="email"
                   name="review-form__email" id="review-form__email" required>
                 <div class="review-form__icon">
                   <svg class="review-form__icon--svg" xmlns="http://www.w3.org/2000/svg" width="18" height="18">
-                  <use href="img/sprite.svg#icon-mail"></use>
-                </svg>
+                    <use href="img/sprite.svg#icon-mail"></use>
+                  </svg>
                 </div>
               </div>
             </div>
@@ -103,7 +105,8 @@
 
           <!--Ваше общее впечатление-->
           <fieldset class="review-form__field review-form__field--effect">
-            <legend class="review-form__title review-form__title--effect review-form__title--highlight">Ваше общее впечатление:</legend>
+            <legend class="review-form__title review-form__title--effect review-form__title--highlight">Ваше общее
+              впечатление:</legend>
             <ul class="review-form__effect-list">
               <li class="review-form__effect-item">
                 <label class="review-form__control">
@@ -134,7 +137,8 @@
 
           <!--Посещенные достопримечательности-->
           <fieldset class="review-form__field review-form__field--visited">
-            <legend class="review-form__title review-form__title--visited review-form__title--highlight">Посещенные<br> достопримечательности:
+            <legend class="review-form__title review-form__title--visited review-form__title--highlight">Посещенные<br>
+              достопримечательности:
             </legend>
             <ul class="review-form__infrastructure-list">
               <li class="review-form__infrastructure-item">
@@ -231,9 +235,8 @@
       <div class="modal modal--positive">
         <div class="modal__wrapper">
           <h2 class="modal__title">Ваш отзыв отправлен!</h2>
-          <p class="modal__subtitle">Ваш отзыв отправлен!Спасибо за ваше<br> участие, ваш отзыв уже поступил к
-            нам.<br>В
-            ближайшее время мы<br> опубликуем его на сайте.</p>
+          <p class="modal__subtitle">Спасибо за ваше участие, ваш отзыв уже поступил к нам.<br> В
+            ближайшее время мы опубликуем его на сайте.</p>
         </div>
         <div class="modal__button">
           <button class="modal__close-button button button--blue" type="button">Закрыть окно</button>
@@ -244,9 +247,11 @@
     <!--Модальное окно - Что-то пошло не так!-->
     <div class="modal-container modal-container--close-negative">
       <div class="modal modal--negative">
-        <h2 class="modal__title">Что-то пошло не так!</h2>
-        <p class="modal__subtitle">Проверьте поля, выделенные<br> красным, скорее всего вы<br> забыли их заполнить</p>
-        <button class="modal__ok-button button button--blue" type="button">Ок</button>
+        <div class="modal__wrapper modal__wrapper--negative">
+          <h2 class="modal__title modal__title--negative">Что-то пошло<br> не так!</h2>
+          <p class="modal__subtitle modal__subtitle--negative">Проверьте поля, выделенные красным, скорее всего вы забыли их заполнить</p>
+          <button class="modal__ok-button button button--blue" type="button">Ок</button>
+        </div>
       </div>
     </div>
   </div>
