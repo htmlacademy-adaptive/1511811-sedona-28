@@ -44,8 +44,8 @@
       </div>
       <section class="form-intro container">
         <div class="review-form-intro">
-          <h2 class="main-intro__header">Оставьте свой отзыв</h2>
-          <p class="main-intro__subtitle">Помогите нашим отелям стать лучше! оставьте отзыв о них,<br>а также о
+          <h2 class="main-intro__header main-intro__header--form">Оставьте свой отзыв</h2>
+          <p class="main-intro__subtitle">Помогите нашим отелям стать лучше! оставьте отзыв о них, а также о
             посещенных вами достопримечательностях</p>
         </div>
 
@@ -54,27 +54,27 @@
         <!--Ф.И.О.-->
         <form class="review-form" action="https://echo.htmlacademy.ru/" method="post">
           <fieldset class="review-form__field review-form__field--id">
-            <legend class="review-form__title">Представьтесь:</legend>
+            <legend class="review-form__title review-form__title--id">Представьтесь:</legend>
             <div class="review-form__id-wrapper">
               <label class="review-form__label" for="review-form__name">Имя<sup>*</sup>:</label>
-              <input class="review-form__input" placeholder="Имя" type="text" name="review-form__name"
+              <input class="review-form__input review-form__input--id" placeholder="Имя" type="text" name="review-form__name"
                 id="review-form__name" value="Пётр" required>
             </div>
             <div class="review-form__id-wrapper">
               <label class="review-form__label" for="review-form__surname">Фамилия<sup>*</sup>:</label>
-              <input class="review-form__input" placeholder="Фамилия" type="text" name="review-form__surname"
-                id="review-form__surname" value="" required>
+              <input class="review-form__input review-form__input--id" placeholder="Фамилия" type="text" name="review-form__surname"
+                id="review-form__surname" value="Пустота" required>
             </div>
             <div class="review-form__id-wrapper">
               <label class="review-form__label" for="review-form__middle-name">Отчество:</label>
-              <input class="review-form__input" placeholder="Отчество" type="text" name="review-form__middle-name"
+              <input class="review-form__input review-form__input--id review-form__input--surname" placeholder="Отчество" type="text" name="review-form__middle-name"
                 id="review-form__middle-name" value="Викторович">
             </div>
           </fieldset>
 
           <!--Контактная информация-->
           <fieldset class="review-form__field review-form__field--contacts">
-            <legend class="review-form__title">Контактная информация:</legend>
+            <legend class="review-form__title review-form__title--contacts">Контактная информация:</legend>
             <div class="review-form__id-wrapper">
               <label class="review-form__label" for="review-form__telephone">Контактный телефон<sup>*</sup>:</label>
               <div class="review-form__wrapper">
@@ -103,13 +103,13 @@
 
           <!--Ваше общее впечатление-->
           <fieldset class="review-form__field review-form__field--effect">
-            <legend class="review-form__title review-form__title--highlight">Ваше общее впечатление:</legend>
+            <legend class="review-form__title review-form__title--effect review-form__title--highlight">Ваше общее впечатление:</legend>
             <ul class="review-form__effect-list">
               <li class="review-form__effect-item">
                 <label class="review-form__control">
                   <input class="review-form__input-control visually-hidden" type="radio" name="effect-radio"
                     value="positive" checked>
-                  <span class="review-form__control-mark"></span>
+                  <span class="review-form__control-mark review-form__control-mark--effect"></span>
                   <span class="review-form__control-label">Скорее положительное</span>
                 </label>
               </li>
@@ -117,7 +117,7 @@
                 <label class="review-form__control">
                   <input class="review-form__input-control visually-hidden" type="radio" name="effect-radio"
                     value="negative">
-                  <span class="review-form__control-mark"></span>
+                  <span class="review-form__control-mark review-form__control-mark--effect"></span>
                   <span class="review-form__control-label">Скорее отрицательное</span>
                 </label>
               </li>
@@ -125,23 +125,23 @@
                 <label class="review-form__control">
                   <input class="review-form__input-control visually-hidden" type="radio" name="effect-radio"
                     value="can't-answer">
-                  <span class="review-form__control-mark"></span>
+                  <span class="review-form__control-mark review-form__control-mark--effect"></span>
                   <span class="review-form__control-label">Затрудняюсь ответить</span>
                 </label>
               </li>
             </ul>
           </fieldset>
 
-          <!--Посещённые достопримечательности-->
+          <!--Посещенные достопримечательности-->
           <fieldset class="review-form__field review-form__field--visited">
-            <legend class="review-form__title review-form__title--highlight">Посещённые<br> достопримечательности:
+            <legend class="review-form__title review-form__title--visited review-form__title--highlight">Посещенные<br> достопримечательности:
             </legend>
             <ul class="review-form__infrastructure-list">
               <li class="review-form__infrastructure-item">
                 <label class="review-form__control">
                   <input class="review-form__input-control visually-hidden" type="checkbox" name="bridge" checked>
                   <span class="review-form__control-mark"></span>
-                  <span class="review-form__checkbox-label">Мост дьявола</span>
+                  <span class="review-form__checkbox-label">Мост Дьявола</span>
                 </label>
               </li>
               <li class="review-form__infrastructure-item">
@@ -178,7 +178,7 @@
             </div>
             <div class="review-form__bottom-wrapper">
               <button class="review-form__button button button--blue" type="submit">Отправить отзыв</button>
-              <span class="review-form__footnote">*-Обязательные поля</span>
+              <span class="review-form__footnote">*&nbsp - Обязательные поля</span>
             </div>
           </fieldset>
         </form>

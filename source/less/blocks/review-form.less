@@ -1,7 +1,25 @@
+//Вертикальная декоративная полоска
+.review-form__field--id::before {
+  @media (min-width: @tablet-width) {
+    content: "";
+    position: absolute;
+    width: 1px;
+    background-color: #dbdbdb;
+    height: 338px;
+    left: 324px;
+    top: -50px;
+  }
+
+  @media (min-width: @desktop-width) {
+    left: 480px;
+    top: -59px;
+  }
+}
+
 .review-form {
   display: flex;
   flex-direction: column;
-  gap: 24px;
+  gap: 38px;
 
   @media (min-width: @tablet-width) {
     display: grid;
@@ -26,14 +44,14 @@
   &--id {
     display: flex;
     flex-direction: column;
-    gap: 16px;
+    gap: 13px;
   }
 
   //Контактная информация
   &--contacts {
     display: flex;
     flex-direction: column;
-    gap: 16px;
+    gap: 10px;
   }
 
   //Ваше общее впечатление
@@ -42,7 +60,7 @@
     @media (min-width: @tablet-width) {
       grid-column: 1 / -1;
       grid-row: 2 / 3;
-      margin: 63px 0 0 0;
+      margin: 4px 0 0 0;
     }
 
     @media (min-width: @desktop-width) {
@@ -53,8 +71,6 @@
 
   //Посещенные достопримечательности
   &--visited {
-    padding-bottom: 15px;
-
     @media (min-width: @tablet-width) {
       grid-column: 1 / -1;
       grid-row: 3 / 4;
@@ -70,36 +86,15 @@
   &--user-message {
     @media (min-width: @tablet-width) {
       grid-column: 1 / -1;
-      margin: 42px 0 0 0;
+      margin: 15px 0 0 0;
     }
 
     @media (min-width: @desktop-width) {
       grid-column: 1 / -1;
-      margin: 56px 0 0 0;
+      margin: 27px 0 0 0;
       padding: 0 96px;
     }
   }
-}
-
-//Вертикальная декоративная полоска
-.review-form__field--id::before {
-  @media (min-width: @tablet-width) {
-    content: "";
-    position: absolute;
-    width: 1px;
-    background-color: #dbdbdb;
-    height: 338px;
-    left: 332px;
-    top: -50px;
-  }
-
-  @media (min-width: @desktop-width) {
-    left: 485px;
-  }
-}
-
-.review-form__user-message {
-  margin-bottom: 56px;
 }
 
 .review-form__effect-list {
@@ -110,15 +105,16 @@
 
   @media (min-width: @tablet-width) {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 280px 280px;
     gap: 16px;
+    padding: 0 36px;
   }
 
   @media (min-width: @desktop-width) {
     display: flex;
     justify-content: space-between;
     flex-direction: row;
-    padding: 27px 0;
+    padding: 16px 35px;
   }
 }
 
@@ -144,7 +140,8 @@
     height: 1px;
     background-color: #dbdbdb;
     width: 100%;
-    top: -55px;
+    top: -67px;
+    left: 0;
   }
 }
 
@@ -159,13 +156,14 @@
     grid-template-columns: 1fr 1fr;
     column-gap: 32px;
     row-gap: 36px;
+    padding: 0 84px;
   }
 
   @media (min-width: @desktop-width) {
     display: flex;
     justify-content: space-between;
     flex-direction: row;
-    padding: 41px 0;
+    padding: 30px 45px;
   }
 }
 
@@ -186,8 +184,11 @@
   position: static;
 
   @media (min-width: @tablet-width) {
+    .bold;
     margin: 0 0 28px;
     position: relative;
+    padding: 0;
+    margin-bottom: 25px;
 
     &--highlight {
       width: 402px;
@@ -198,6 +199,37 @@
 
   @media (min-width: @desktop-width) {
     margin: 0 0 28px;
+  }
+
+  &--effect {
+    padding-top: 22px;
+    margin-bottom: 30px;
+
+    @media (min-width: @desktop-width) {
+      padding-top: 27px;
+    }
+  }
+
+  &--visited {
+    padding-top: 20px;
+    margin-bottom: 31px;
+
+    @media (min-width: @tablet-width) {
+      padding-top: 8px;
+      margin-bottom: 40px;
+      padding-right: 3px;
+    }
+
+    @media (min-width: @desktop-width) {
+      padding-top: 20px;
+    }
+  }
+
+  &--id,
+  &--contacts {
+    @media (min-width: @desktop-width) {
+      margin-bottom: 25px;
+    }
   }
 }
 
@@ -229,6 +261,7 @@
   border: none;
   padding: 16px 0 16px 16px;
   outline: none;
+  width: 100%;
 
   &:hover {
     background-color: #e5e5e5;
@@ -242,6 +275,22 @@
 
   @media (min-width: @tablet-width) {
     width: 100%;
+  }
+
+  &--id {
+    @media (min-width: @tablet-width) {
+      width: 280px;
+    }
+
+    @media (min-width: @desktop-width) {
+      width: 415px;
+    }
+  }
+
+  &--surname {
+    @media (min-width: @desktop-width) {
+      padding-top: 20px;
+    }
   }
 }
 
@@ -257,9 +306,14 @@
   position: relative;
 
   @media (min-width: @tablet-width) {
-    text-align: center;
+    text-align: left;
     width: 280px;
     padding: 10px 0;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 280px;
+    text-align: center;
   }
 }
 
@@ -292,6 +346,12 @@
   @media (min-width: @tablet-width) {
     top: 0;
   }
+
+  &--effect {
+    @media (min-width: @desktop-width) {
+      transform: translateX(20px);
+    }
+  }
 }
 
 .review-form__input-control[type="radio"] + .review-form__control-mark {
@@ -322,19 +382,6 @@
   background-color: #f2f2f2;
 }
 
-//галочка в чекбоксах
-.review-form__input-control[type="checkbox"]:checked + .review-form__control-mark::before {
-  content: "";
-  position: absolute;
-  background-image: url("../img/tick.svg");
-  background-repeat: no-repeat;
-  background-size: cover;
-  top: 15px;
-  left: 13px;
-  width: 22px;
-  height: 16px;
-}
-
 .review-form__checkbox-label {
   .title;
   text-transform: none;
@@ -342,15 +389,6 @@
   position: relative;
   margin-left: 46px;
 }
-
-// .review-form__checkbox-label::after {
-//   content: url("../img/tick.svg");
-//   position: absolute;
-//   top: 2px;
-//   left: -32px;
-//   width: 25px;
-//   height: 19px;
-// }
 
 .review-form__marks-group {
   border: none;
@@ -377,18 +415,17 @@
   }
 }
 
-.review-form__bottom-wrapper {
-  @media (min-width: @tablet-width) {
-    display: flex;
-    justify-content: space-between;
-    width: 648px;
-  }
-
-  @media (min-width: @desktop-width) {
-    display: flex;
-    justify-content: space-between;
-    width: 768px;
-  }
+//галочка в чекбоксах
+.review-form__input-control[type="checkbox"]:checked + .review-form__control-mark::before {
+  content: "";
+  position: absolute;
+  background-image: url("../img/tick.svg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  top: 14px;
+  left: 11px;
+  width: 22px;
+  height: 16px;
 }
 
 .review-form__button {
@@ -397,6 +434,14 @@
   background-color: @background-preview;
   color: @subtitle-color;
   width: 280px;
+
+  @media (min-width: @tablet-width) {
+    width: 324px;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 384px;
+  }
 }
 
 .review-form__footnote {
@@ -409,7 +454,9 @@
   color: rgba(51, 51, 51, 0.6);
 
   @media (min-width: @tablet-width) {
+    .subtitle;
     align-items: center;
+    padding-top: 8px;
   }
 
   @media (min-width: @desktop-width) {
@@ -419,6 +466,7 @@
 
 .review-form__wrapper {
   display: flex;
+  justify-content: space-between;
 }
 
 .review-form__icon {
@@ -428,5 +476,22 @@
 
   &--svg {
     padding: 20px;
+  }
+}
+
+.review-form__bottom-wrapper {
+  padding-top: 48px;
+
+  @media (min-width: @tablet-width) {
+    display: flex;
+    justify-content: space-between;
+    width: 648px;
+    padding-top: 52px;
+  }
+
+  @media (min-width: @desktop-width) {
+    display: flex;
+    justify-content: space-between;
+    width: 768px;
   }
 }
