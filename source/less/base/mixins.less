@@ -12,6 +12,12 @@
   line-height: 1.44; //26px
 }
 
+.big-title {
+  font-weight: 700;
+  font-size: 30px;
+  line-height: 1.44; //26px
+}
+
 //Шрифт для подзаголовков
 .subtitle {
   font-weight: 400;
@@ -35,8 +41,19 @@
   padding-top: 16px;
   padding-bottom: 16px;
   text-transform: uppercase;
+  cursor: pointer;
 
   &--blue {
     background-color: @button-blue;
+
+    &:hover {
+      color: #ffffff;
+      background: #669ec0;
+    }
+
+    &:active {
+      color: rgba(255, 255, 255, 0.3);
+      background: #5496bd;
+    }
   }
 }
