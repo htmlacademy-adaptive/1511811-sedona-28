@@ -56,17 +56,27 @@
 .video__button {
   position: absolute;
   background: transparent;
-  left: 39.5%;
+  background-image: url("../img/polygon@1.svg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 48px;
+  height: 54px;
+  left: 41%;
   top: 33.5%;
   border: none;
 
+  &:hover {
+    width: 55px;
+    height: 60px;
+  }
+
   @media (min-width: @tablet-width) {
-    left: 45%;
+    left: 46%;
     top: 44%;
   }
 
   @media (min-width: @desktop-width) {
-    left: 46%;
+    left: 47%;
     top: 44%;
   }
 }
