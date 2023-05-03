@@ -62,13 +62,13 @@ return gulp.src('source/img/*.{jpg,png}')
 
 
 //SVG
-export const svg = () => {
+const svg = () => {
 return gulp.src(['source/img/*.svg', '!source/img/icons/*.svg'])
 .pipe(svgo())
 .pipe(gulp.dest('build/img'))
 }
 
-export const sprite = () => {
+const sprite = () => {
   return gulp.src('source/img/icons/*.svg')
   .pipe(svgo())
   .pipe(svgstore())
@@ -89,7 +89,7 @@ done();
 }
 
 //Clean
-export const clean = () => {
+const clean = () => {
   return del('build')
 }
 
@@ -124,6 +124,7 @@ const watcher = () => {
 
 
 //Build
+
 export const build = gulp.series(
   clean,
   copy,
