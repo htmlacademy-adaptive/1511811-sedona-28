@@ -5,10 +5,13 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <title>«Седона. Фото и видео.»</title>
-  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/style.min.css">
   <link rel="icon" href="favicon32.ico">
   <link rel="icon" href="img/favicon32.svg" type="image/svg+xml">
   <link rel="apple-touch-icon" href="img/favicon152.png">
+  <link rel="preload" href="fonts/ptsans.woff2" as="font">
+  <link rel="preload" href="fonts/ptsansbold.woff2" as="font">
+  <link rel="preload" href="img/second-back-mobile.webp" as="image">
 </head>
 
 <body class="page__body">
@@ -48,10 +51,10 @@
                 <article class="product__article product__article--wrapper">
                   <picture>
                     <source media="(min-width: 1200px)"
-                      srcset="img/photo-1-desktop@1x.jpg, img/photo-1-desktop@2x.jpg 2x">
-                    <source media="(min-width: 768px)" srcset="img/photo-1-tablet@1x.jpg, img/photo-1-tablet@2x.jpg 2x">
-                    <img class="product__image product__image--spaces" src="img/photo-1-mobile@1x.jpg"
-                      srcset="img/photo-1-mobile@2x.jpg 2x" alt="Неродные просторы" width="1200" height="400"></picture>
+                      srcset="img/photo-1-desktop@1x.webp, img/photo-1-desktop@2x.webp 2x">
+                    <source media="(min-width: 768px)" srcset="img/photo-1-tablet@1x.webp, img/photo-1-tablet@2x.webp 2x">
+                    <img class="product__image product__image--spaces" src="img/photo-1-mobile@1x.webp"
+                      srcset="img/photo-1-mobile@2x.webp 2x" alt="Неродные просторы" width="400" height="267"></picture>
                   <div class="product__caption-wrapper">
                     <div class="product__caption">
                       <h3 class="product__caption-title">Неродные просторы</h3>
@@ -73,9 +76,9 @@
                 <article class="product__image">
                   <picture>
                     <source media="(min-width: 1200px)"
-                      srcset="img/photo-2-desktop@1x.jpg, img/photo-2-desktop@2x.jpg 2x">
-                    <source media="(min-width: 768px)" srcset="img/photo-2-tablet@1x.jpg, img/photo-2-tablet@2x.jpg 2x">
-                    <img src="img/photo-2-mobile@1x.jpg" srcset="img/photo-2-mobile@2x.jpg 2x" width="400" height="267"
+                      srcset="img/photo-2-desktop@1x.webp, img/photo-2-desktop@2x.webp 2x">
+                    <source media="(min-width: 768px)" srcset="img/photo-2-tablet@1x.webp, img/photo-2-tablet@2x.webp 2x">
+                    <img src="img/photo-2-mobile@1x.webp" loading="lazy" srcset="img/photo-2-mobile@2x.webp 2x" width="400" height="267"
                       alt="Местная растительность"></picture>
                   <div class="product__caption-wrapper">
                     <div class="product__caption product__caption--item">
@@ -94,9 +97,9 @@
                 <article class="product__image">
                   <picture>
                     <source media="(min-width: 1200px)"
-                      srcset="img/photo-3-desktop@1x.jpg, img/photo-3-desktop@2x.jpg 2x">
-                    <source media="(min-width: 768px)" srcset="img/photo-3-tablet@1x.jpg, img/photo-3-tablet@2x.jpg 2x">
-                    <img src="img/photo-3-mobile@1x.jpg" srcset="img/photo-3-mobile@2x.jpg 2x" width="400" height="267"
+                      srcset="img/photo-3-desktop@1x.webp, img/photo-3-desktop@2x.webp 2x">
+                    <source media="(min-width: 768px)" srcset="img/photo-3-tablet@1x.webp, img/photo-3-tablet@2x.webp 2x">
+                    <img src="img/photo-3-mobile@1x.webp" loading="lazy" srcset="img/photo-3-mobile@2x.webp 2x" width="400" height="267"
                       alt="Дорога на север"></picture>
                   <div class="product__caption-wrapper product__caption-wrapper--item">
                     <div class="product__caption product__caption--item">
@@ -115,9 +118,9 @@
                 <article class="product__image">
                   <picture>
                     <source media="(min-width: 1200px)"
-                      srcset="img/photo-4-desktop@1x.jpg, img/photo-4-desktop@2x.jpg 2x">
-                    <source media="(min-width: 768px)" srcset="img/photo-4-tablet@1x.jpg, img/photo-4-tablet@2x.jpg 2x">
-                    <img src="img/photo-4-mobile@1x.jpg" srcset="img/photo-4-mobile@2x.jpg 2x" alt="Мост дьявола">
+                      srcset="img/photo-4-desktop@1x.webp, img/photo-4-desktop@2x.webp 2x">
+                    <source media="(min-width: 768px)" srcset="img/photo-4-tablet@1x.webp img/photo-4-tablet@2x.webp 2x">
+                    <img src="img/photo-4-mobile@1x.webp" loading="lazy" srcset="img/photo-4-mobile@2x.webp 2x" width="400" height="267" alt="Мост дьявола">
                   </picture>
                   <div class="product__caption-wrapper">
                     <div class="product__caption product__caption--item">
@@ -143,10 +146,10 @@
           <div class="video__presentation">
             <h3 class="visually-hidden">Видеопрезентация Седоны.</h3>
             <picture>
-              <source media="(min-width: 1200px)" srcset="img/video-desktop@1x.jpg, img/video-desktop@2x.jpg 2x">
-              <source media="(min-width: 768px)" srcset="img/video-tablet@1x.jpg, img/video-tablet@2x.jpg 2x">
+              <source media="(min-width: 1200px)" srcset="img/video-desktop@1x.webp, img/video-desktop@2x.webp 2x">
+              <source media="(min-width: 768px)" srcset="img/video-tablet@1x.webp, img/video-tablet@2x.webp2x">
               <img
-                class="video__clip" src="img/video-mobile@1x.jpg" srcset="img/video-mobile@2x.jpg 2x" width="800"
+                class="video__clip" loading="lazy" src="img/video-mobile@1x.webp" srcset="img/video-mobile@2x.webp 2x" width="800"
                 height="500" alt="Видеопрезентация Седоны"></picture>
                 <button class="video__button"></button>
           </div>
