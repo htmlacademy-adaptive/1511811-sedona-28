@@ -19,7 +19,8 @@ export const styles = () => {
     .pipe(plumber())
     .pipe(less())
     .pipe(postcss([
-      autoprefixer()
+      autoprefixer(),
+      csso()
     ]))
     .pipe(rename('style.min.css'))
     .pipe(gulp.dest('build/css', { sourcemaps: '.' }))
@@ -60,7 +61,6 @@ return gulp.src('source/img/*.{jpg,png}')
 }))
 .pipe(gulp.dest('build/img'))
 }
-
 
 //SVG
 const svg = () => {
@@ -123,7 +123,6 @@ const watcher = () => {
   gulp.watch('source/*.html', gulp.series(html, reload));
 }
 
-
 //Build
 
 export const build = gulp.series(
@@ -139,7 +138,6 @@ export const build = gulp.series(
     styles
   ),
 );
-
 
 //Default
 export default gulp.series(

@@ -10,3 +10,41 @@
     padding: 0 262px 68px;
   }
 }
+
+.review-form-intro__title {
+  .title;
+  margin-top: 0;
+  margin-bottom: 35px;
+
+  @media (min-width: @tablet-width) {
+    .bold;
+    margin-bottom: 30px;
+
+    br {
+      display: block;
+    }
+  }
+
+  @media (min-width: @desktop-width) {
+    padding-right: 6px;
+  }
+
+  &--form {
+    margin-bottom: 25px;
+
+    @media (min-width: @tablet-width) {
+      .big-title;
+      padding-right: 0;
+      margin-bottom: 14px;
+    }
+
+    @media (min-width: @desktop-width) {
+      transform: translateY(-10px);
+    }
+  }
+}
+
+.review-form-intro__subtitle {
+  .subtitle;
+  margin-bottom: 0;
+}
