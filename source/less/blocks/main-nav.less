@@ -29,16 +29,9 @@
   flex-wrap: wrap;
 
   @media (min-width: @tablet-width) {
-    background-color: #ffffff;
-    display: grid;
-    grid-template-columns: repeat(5, 1fr);
-    width: 100%;
-  }
-
-  @media (min-width: @desktop-width) {
-    background-color: #ffffff;
-    display: grid;
-    grid-template-columns: repeat(5, 1fr);
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
     width: 100%;
   }
 }
@@ -54,7 +47,7 @@
   height: 56px;
   cursor: pointer;
   padding: 0;
-  background-color: #ffffff;
+  background-color: transparent;
 
   &--opened {
     background-color: #81b3d2;
@@ -106,7 +99,11 @@
   cursor: pointer;
 
   &--active {
-    box-shadow: none;
+    @media (min-width: @tablet-width) {
+      box-shadow: none;
+      position: absolute;
+      left: 40%;
+    }
   }
 
   //Состояния ссылок для mobile
@@ -115,7 +112,8 @@
       0 1px 0 rgba(1, 1, 1, 0.2),
       inset 0 1px 0 rgba(255, 255, 255, 0.2);
 
-    &:hover {
+    &:hover,
+    &:focus-visible {
       color: #ffffff;
       background: #669ec0;
     }
@@ -131,7 +129,8 @@
     background-color: #ffffff;
     color: #000000;
 
-    &:hover {
+    &:hover,
+    &:focus-visible {
       color: #81b3d2;
     }
 
@@ -143,7 +142,8 @@
     &--current {
       color: #766357;
 
-      &:hover {
+      &:hover,
+      &:focus-visible {
         color: #766357;
       }
 
@@ -158,7 +158,8 @@
     background-color: #ffffff;
     color: #000000;
 
-    &:hover {
+    &:hover,
+    &:focus-visible {
       color: #81b3d2;
     }
 
@@ -170,7 +171,8 @@
     &--current {
       color: #766357;
 
-      &:hover {
+      &:hover,
+      &:focus-visible {
         color: #766357;
       }
 
@@ -190,6 +192,13 @@
     min-width: 20%;
     padding-top: 18px;
     padding-bottom: 14px;
+  }
+}
+
+//Отступ для логотипа + переполнение
+.main-nav__link:nth-child(4n+4) {
+  @media (min-width: @tablet-width) {
+    margin-left: 20%;
   }
 }
 
@@ -278,7 +287,8 @@
     transform: rotate(-45deg);
   }
 
-  &:hover {
+  &:hover,
+  &:focus-visible {
     color: #ffffff;
     opacity: 0.6;
   }
@@ -286,5 +296,25 @@
   &:active {
     color: #ffffff;
     opacity: 0.3;
+  }
+}
+
+//Состояние мобильного меню при выключенном js
+@media (max-width: @mobile-width-only) {
+  .main-nav--nojs .main-nav__toggle {
+    display: none;
+  }
+
+  .main-nav--nojs .main-nav__wrapper {
+    position: static;
+    min-height: 0;
+  }
+
+  .main-nav--nojs .main-nav__link {
+    display: block;
+  }
+
+  .main-nav--nojs .main-nav__link--active {
+    display: none;
   }
 }

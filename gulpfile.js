@@ -61,7 +61,6 @@ return gulp.src('source/img/*.{jpg,png}')
 .pipe(gulp.dest('build/img'))
 }
 
-
 //SVG
 const svg = () => {
 return gulp.src(['source/img/*.svg', '!source/img/icons/*.svg'])
@@ -123,7 +122,6 @@ const watcher = () => {
   gulp.watch('source/*.html', gulp.series(html, reload));
 }
 
-
 //Build
 
 export const build = gulp.series(
@@ -139,7 +137,6 @@ export const build = gulp.series(
     styles
   ),
 );
-
 
 //Default
 export default gulp.series(

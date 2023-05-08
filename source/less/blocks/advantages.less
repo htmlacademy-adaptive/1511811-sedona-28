@@ -5,14 +5,30 @@
   margin-bottom: 11px;
   position: relative;
 
-  @media (max-width: @mobile-width-only) {
-    br {
-      display: none;
-    }
+  br {
+    display: none;
   }
 
   @media (min-width: @tablet-width) {
     .bold;
+
+    br {
+      display: block;
+    }
+  }
+
+  @media (min-width: @desktop-width) {
+    padding: 0 45px;
+  }
+
+  &--bridge {
+    @media (max-width: @mobile-width-only) {
+      br {
+        display: none;
+      }
+    }
+
+    padding: 0;
   }
 
   &--house {
@@ -161,6 +177,24 @@
     text-align: center;
     position: relative;
   }
+
+
+  &--cards {
+    @media (max-width: @mobile-width-only) {
+      padding-bottom: 44px;
+    }
+
+    @media (min-width: @tablet-width) {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      grid-column: 1 / -1;
+    }
+
+    @media (min-width: @desktop-width) {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
 }
 
 .advantages__item--no-preview:not(:last-child)::after {
@@ -270,6 +304,23 @@
         display: none;
       }
     }
+
+    &--vegas {
+      @media (max-width: @mobile-width-only) {
+        br {
+          display: none;
+        }
+      }
+
+      @media (min-width: @desktop-width) {
+        br {
+          content: " ";
+          float: right;
+        }
+
+        padding: 0 15px;
+      }
+    }
   }
 
   &--cards {
@@ -277,16 +328,6 @@
 
     @media (min-width: @tablet-width) {
       margin-top: 22px;
-    }
-  }
-
-  &--vegas {
-    @media (min-width: @desktop-width) {
-      br {
-        display: none;
-      }
-
-      padding: 0 15px;
     }
   }
 
@@ -311,7 +352,6 @@
   @media (min-width: @tablet-width) {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    // grid-template-rows: minmax(auto, 256px) 1fr minmax(auto, 256px);
   }
 
   @media (min-width: @desktop-width) {
