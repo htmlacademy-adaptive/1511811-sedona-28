@@ -24,6 +24,17 @@
   order: -1;
   margin-bottom: 30px;
 
+  &:hover,
+  &:focus-visible {
+    color: #81b3d2;
+    fill: #81b3d2;
+  }
+
+  &:active {
+    color: #b3b3b3;
+    fill: #b3b3b3;
+  }
+
   @media (min-width: @tablet-width) {
     .bold;
     margin: 0;
@@ -44,7 +55,8 @@
   text-decoration: none;
   color: #000000;
 
-  &:hover {
+  &:hover,
+  &:focus-visible {
     color: #81b3d2;
     fill: #81b3d2;
   }
@@ -59,6 +71,7 @@
   .list-reset;
   display: flex;
   margin-bottom: 15px;
+  flex-wrap: wrap;
 
   @media (min-width: @tablet-width) {
     .list-reset;
@@ -77,13 +90,18 @@
   height: 48px;
   background-color: @background-preview;
 
-  &:hover {
+  &:hover,
+  &:focus-visible {
     background-color: #669ec0;
   }
 
   &:active {
     background-color: #5496bd;
   }
+}
+
+.page-footer__social-item {
+  margin-top: 1px;
 }
 
 .page-footer__social-item:not(:last-child) {

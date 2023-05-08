@@ -24,7 +24,7 @@
         </button>
         <div class="main-nav__wrapper"><a class="main-nav__link" href="index.html">Главная</a>
           <a class="main-nav__link main-nav__link--current" href="catalog.html">Фото и видео</a>
-          <a class="main-nav__link main-nav__link--active" href="#">
+          <a class="main-nav__link main-nav__link--active" href="index.html">
             <img class="main-nav__header-logo" src="img/logo.svg" width="185" height="96" alt="Logo of Sedona">
           </a>
           <a class="main-nav__link" href="form.html">Форма отзыва</a>
@@ -170,7 +170,9 @@
               <source media="(min-width: 768px)" srcset="img/video-tablet@1x.webp, img/video-tablet@2x.webp 2x">
               <img class="video__clip" loading="lazy" src="img/video-mobile@1x.webp" srcset="img/video-mobile@2x.webp 2x" width="800" height="500" alt="Видеопрезентация Седоны">
             </picture>
-            <button class="video__button"></button>
+            <button class="video__button">
+              <span class="visually-hidden">Кнопка возпроизведения.</span>
+            </button>
           </div>
         </div>
       </section>
@@ -204,8 +206,8 @@
         </ul>
         <a class="page-footer__title" href="#">#visitsedona</a>
         <p class="page-footer__madeby">
-          <a class="page-footer__madeby-link" href="https://echo.htmlacademy.ru/">Разработано
-            <svg class="page-footer__madeby-svg" width="28" height="35">
+          <a class="page-footer__madeby-link" href="https://htmlacademy.ru/intensive/adaptive">Разработано
+            <svg class="page-footer__madeby-svg" width="28" height="35" alt="Логотип Академии">
               <use href="img/sprite.svg#madeby-svg"></use>
             </svg>
           </a>

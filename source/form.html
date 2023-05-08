@@ -25,7 +25,7 @@
         <div class="main-nav__wrapper">
           <a class="main-nav__link" href="index.html">Главная</a>
           <a class="main-nav__link" href="catalog.html">Фото и видео</a>
-          <a class="main-nav__link main-nav__link--active" href="#">
+          <a class="main-nav__link main-nav__link--active" href="index.html">
             <img class="main-nav__header-logo" src="img/logo.svg" width="185" height="96" alt="Logo of Sedona">
           </a>
           <a class="main-nav__link main-nav__link--current" href="form.html">Форма отзыва</a>
@@ -51,8 +51,8 @@
         <!--Форма отзыва-->
         <!--Ф.И.О.-->
         <form class="review-form" action="https://echo.htmlacademy.ru/" method="post">
-          <fieldset class="review-form__field review-form__field--id">
-            <legend class="review-form__title review-form__title--id">Представьтесь:</legend>
+          <div class="review-form__field review-form__field--id">
+            <h3 class="review-form__title review-form__title--id">Представьтесь:</h3>
             <div class="review-form__id-wrapper">
               <label class="review-form__label" for="review-form__name">Имя<sup>*</sup>:</label>
               <input class="review-form__input review-form__input--id" placeholder="Имя" type="text" name="review-form__name" id="review-form__name" value="Пётр" required>
@@ -65,11 +65,11 @@
               <label class="review-form__label" for="review-form__middle-name">Отчество:</label>
               <input class="review-form__input review-form__input--id review-form__input--surname" placeholder="Отчество" type="text" name="review-form__middle-name" id="review-form__middle-name" value="Викторович">
             </div>
-          </fieldset>
+          </div>
           <!--Контактная информация-->
-          <fieldset class="review-form__field review-form__field--contacts">
-            <legend class="review-form__title review-form__title--contacts">Контактная информация:</legend>
-            <div class="review-form__id-wrapper">
+          <div class="review-form__field review-form__field--contacts">
+            <h3 class="review-form__title review-form__title--contacts">Контактная информация:</h3>
+            <div class="review-form__contacts-wrapper">
               <label class="review-form__label" for="review-form__telephone">Контактный телефон<sup>*</sup>:</label>
               <div class="review-form__wrapper">
                 <input class="review-form__input review-form__input--contacts" placeholder="Введите телефон" type="tel" name="review-form__telephone" id="review-form__telephone" required>
@@ -80,7 +80,7 @@
                 </div>
               </div>
             </div>
-            <div class="review-form__id-wrapper">
+            <div class="review-form__contacts-wrapper">
               <label class="review-form__label subtitle" for="review-form__email">Электронная почта<sup>*</sup>:</label>
               <div class="review-form__wrapper">
                 <input class="review-form__input review-form__input--contacts" placeholder="Введите e-mail" type="email" name="review-form__email" id="review-form__email" required>
@@ -90,10 +90,10 @@
                   </svg></div>
               </div>
             </div>
-          </fieldset>
+          </div>
           <!--Ваше общее впечатление-->
-          <fieldset class="review-form__field review-form__field--effect">
-            <legend class="review-form__title review-form__title--effect review-form__title--highlight">Ваше общее впечатление:</legend>
+          <div class="review-form__field review-form__field--effect">
+            <h3 class="review-form__title review-form__title--effect review-form__title--highlight">Ваше общее впечатление:</h3>
             <ul class="review-form__effect-list">
               <li class="review-form__effect-item">
                 <label class="review-form__control">
@@ -117,10 +117,10 @@
                 </label>
               </li>
             </ul>
-          </fieldset>
+          </div>
           <!--Посещенные достопримечательности-->
-          <fieldset class="review-form__field review-form__field--visited">
-            <legend class="review-form__title review-form__title--visited review-form__title--highlight">Посещенные<br>достопримечательности:</legend>
+          <div class="review-form__field review-form__field--visited">
+            <h3 class="review-form__title review-form__title--visited review-form__title--highlight">Посещенные<br>достопримечательности:</h3>
             <ul class="review-form__infrastructure-list">
               <li class="review-form__infrastructure-item">
                 <label class="review-form__control">
@@ -151,10 +151,10 @@
                 </label>
               </li>
             </ul>
-          </fieldset>
+          </div>
           <!--Описание эмоций-->
-          <fieldset class="review-form__field review-form__field--user-message">
-            <legend class="review-form__title review-form__title--highlight">Опишите свои эмоции:</legend>
+          <div class="review-form__field review-form__field--user-message">
+            <h3 class="review-form__title review-form__title--highlight">Опишите свои эмоции:</h3>
             <div class="review-form__user-message">
               <label class="visually-hidden" for="user-message">Форма для описаний эмоций</label>
               <textarea class="review-form__description" placeholder="Опишите подробно все свои восторги" name="user-message" id="user-message"></textarea>
@@ -163,7 +163,7 @@
               <button class="review-form__button button button--blue" type="submit">Отправить отзыв</button>
               <span class="review-form__footnote">*&nbsp; - Обязательные поля</span>
             </div>
-          </fieldset>
+          </div>
         </form>
       </section>
     </main>
@@ -196,8 +196,8 @@
         </ul>
         <a class="page-footer__title" href="#">#visitsedona</a>
         <p class="page-footer__madeby">
-          <a class="page-footer__madeby-link" href="https://echo.htmlacademy.ru/">Разработано
-            <svg class="page-footer__madeby-svg" width="28" height="35">
+          <a class="page-footer__madeby-link" href="https://htmlacademy.ru/intensive/adaptive">Разработано
+            <svg class="page-footer__madeby-svg" width="28" height="35" alt="Логотип Академии">
               <use href="img/sprite.svg#madeby-svg"></use>
             </svg>
           </a>
