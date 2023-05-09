@@ -389,6 +389,10 @@
     background-color: #d5d5d5;
   }
 
+  &:disabled {
+    background-color: #ffffff;
+  }
+
   @media (min-width: @tablet-width) {
     top: 0;
   }
@@ -402,6 +406,10 @@
 
 .review-form__input-control[type="radio"] + .review-form__control-mark {
   border-radius: 50%;
+
+  &:disabled {
+    color: #ffffff;
+  }
 }
 
 //черная точка в радиокнопках
@@ -414,6 +422,14 @@
   height: 15px;
   border-radius: 50%;
   background-color: #333333;
+}
+
+//Состояние disabled для радиокнопок и чекбоксов
+.review-form__input-control[type="radio"]:disabled + .review-form__control-mark::before,
+.review-form__input-control[type="radio"]:disabled ~ .review-form__control-label,
+.review-form__input-control[type="checkbox"]:disabled + .review-form__control-mark::before,
+.review-form__input-control[type="checkbox"]:disabled ~ .review-form__checkbox-label {
+  opacity: 0.3;
 }
 
 //серый квадратный фон в чекбоксах
@@ -433,6 +449,10 @@
 
   &:active {
     background-color: #d5d5d5;
+  }
+
+  &:disabled {
+    opacity: 0.3;
   }
 }
 
